@@ -12,6 +12,8 @@ class PeriodCell: UITableViewCell{
     
     
     
+    @IBOutlet var wclass: UILabel!
+    @IBOutlet var whichperiod: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
