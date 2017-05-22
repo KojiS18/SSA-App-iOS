@@ -15,7 +15,6 @@
 		0E2872691EBBEBC900FDCE7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E2872681EBBEBC900FDCE7D /* Assets.xcassets */; };
 		0E28726C1EBBEBC900FDCE7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E28726A1EBBEBC900FDCE7D /* LaunchScreen.storyboard */; };
 		0E944B9A1EC4D7F600D9C2AD /* PeriodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E944B991EC4D7F600D9C2AD /* PeriodCell.swift */; };
-		0EB9D5681ED2029D0099256D /* whichclass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB9D5671ED2029D0099256D /* whichclass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		0E28726B1EBBEBC900FDCE7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E28726D1EBBEBC900FDCE7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E944B991EC4D7F600D9C2AD /* PeriodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodCell.swift; sourceTree = "<group>"; };
-		0EB9D5671ED2029D0099256D /* whichclass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = whichclass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +63,6 @@
 				0E28725D1EBBEBC900FDCE7D /* AppDelegate.swift */,
 				0E28725F1EBBEBC900FDCE7D /* RootViewController.swift */,
 				0E2872611EBBEBC900FDCE7D /* DataViewController.swift */,
-				0EB9D5671ED2029D0099256D /* whichclass.swift */,
 				0E2872631EBBEBC900FDCE7D /* ModelController.swift */,
 				0E2872651EBBEBC900FDCE7D /* Main.storyboard */,
 				0E944B991EC4D7F600D9C2AD /* PeriodCell.swift */,
@@ -148,7 +145,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EB9D5681ED2029D0099256D /* whichclass.swift in Sources */,
 				0E2872601EBBEBC900FDCE7D /* RootViewController.swift in Sources */,
 				0E2872641EBBEBC900FDCE7D /* ModelController.swift in Sources */,
 				0E2872621EBBEBC900FDCE7D /* DataViewController.swift in Sources */,
