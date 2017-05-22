@@ -20,49 +20,63 @@ import UIKit
 
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
-    
-    var d: [[Int]] = []
-    var a: [String] = []
-    var alldp: [[String]] = []
+    var dayTypeDict = [0:"1005community",
+                       1:"tuesday",
+                       2:"1005class",
+                       3:"1005advisory",
+                       4:"1015snowdelay",
+                       5:""]
+    var schoolDaysInfo: [[Int]] = []
+    var p4OfEachDay: [String] = []
+    var wholeCycle: [[String]] = []
 
     override init() {
         super.init()
         // Create the data model.
+        //0 index
+        //1 mm
+        //2 dd
+        //3 yy
+        //4 weekday
+        //5 cycleday
+        //6 day type (pre defined types)
+        schoolDaysInfo = [[0, 8, 29, 17, 2, 1, 0], [1, 8, 30, 17, 3, 1, 0], [2, 8, 31, 17, 4, 2, 0], [3, 9, 1, 17, 5, 3, 0], [4, 9, 4, 17, 1, 4, 0], [5, 9, 5, 17, 2, 5, 0], [6, 9, 6, 17, 3, 6, 0], [7, 9, 7, 17, 4, 7, 0], [8, 9, 8, 17, 5, 8, 0], [9, 9, 11, 17, 1, 1, 0], [10, 9, 12, 17, 2, 2, 0], [11, 9, 13, 17, 3, 3, 0], [12, 9, 14, 17, 4, 4, 0], [13, 9, 15, 17, 5, 5, 0], [14, 9, 18, 17, 1, 6, 0], [15, 9, 19, 17, 2, 7, 0], [16, 9, 20, 17, 3, 8, 0], [17, 9, 21, 17, 4, 1, 0], [18, 9, 22, 17, 5, 2, 0], [19, 9, 25, 17, 1, 3, 0], [20, 9, 26, 17, 2, 4, 0], [21, 9, 27, 17, 3, 5, 0], [22, 9, 28, 17, 4, 6, 0], [23, 9, 29, 17, 5, 7, 0], [24, 10, 2, 17, 1, 8, 0], [25, 10, 3, 17, 2, 1, 0], [26, 10, 4, 17, 3, 2, 0], [27, 10, 5, 17, 4, 3, 0], [28, 10, 6, 17, 5, 4, 0], [29, 10, 9, 17, 1, 5, 0], [30, 10, 10, 17, 2, 6, 0], [31, 10, 11, 17, 3, 7, 0], [32, 10, 12, 17, 4, 8, 0], [33, 10, 13, 17, 5, 1, 0], [34, 10, 16, 17, 1, 2, 0], [35, 10, 17, 17, 2, 3, 0], [36, 10, 18, 17, 3, 4, 0], [37, 10, 19, 17, 4, 5, 0], [38, 10, 20, 17, 5, 6, 0], [39, 10, 23, 17, 1, 7, 0], [40, 10, 24, 17, 2, 8, 0], [41, 10, 25, 17, 3, 1, 0], [42, 10, 26, 17, 4, 2, 0], [43, 10, 27, 17, 5, 3, 0], [44, 10, 30, 17, 1, 4, 0], [45, 10, 31, 17, 2, 5, 0]]
         
-        d = [[8, 29, 17, 2, 1, 0], [8, 30, 17, 3, 1, 1], [8, 31, 17, 4, 2, 2], [9, 1, 17, 5, 3, 3], [9, 4, 17, 1, 4, 4], [9, 5, 17, 2, 5, 5], [9, 6, 17, 3, 6, 6], [9, 7, 17, 4, 7, 7], [9, 8, 17, 5, 8, 8], [9, 11, 17, 1, 1, 9], [9, 12, 17, 2, 2, 10], [9, 13, 17, 3, 3, 11], [9, 14, 17, 4, 4, 12], [9, 15, 17, 5, 5, 13], [9, 18, 17, 1, 6, 14], [9, 19, 17, 2, 7, 15], [9, 20, 17, 3, 8, 16], [9, 21, 17, 4, 1, 17], [9, 22, 17, 5, 2, 18], [9, 25, 17, 1, 3, 19], [9, 26, 17, 2, 4, 20], [9, 27, 17, 3, 5, 21], [9, 28, 17, 4, 6, 22], [9, 29, 17, 5, 7, 23], [10, 2, 17, 1, 8, 24], [10, 3, 17, 2, 1, 25], [10, 4, 17, 3, 2, 26], [10, 5, 17, 4, 3, 27], [10, 6, 17, 5, 4, 28], [10, 9, 17, 1, 5, 29], [10, 10, 17, 2, 6, 30], [10, 11, 17, 3, 7, 31], [10, 12, 17, 4, 8, 32], [10, 13, 17, 5, 1, 33], [10, 16, 17, 1, 2, 34], [10, 17, 17, 2, 3, 35], [10, 18, 17, 3, 4, 36], [10, 19, 17, 4, 5, 37], [10, 20, 17, 5, 6, 38], [10, 23, 17, 1, 7, 39], [10, 24, 17, 2, 8, 40], [10, 25, 17, 3, 1, 41], [10, 26, 17, 4, 2, 42], [10, 27, 17, 5, 3, 43], [10, 30, 17, 1, 4, 44], [10, 31, 17, 2, 5, 45]]
-        a = ["English1","History2","Math3","French4","Art5","Free6","Free7","CS8"]
-        alldp.append([a[4],a[7],a[2],a[0],a[3],a[6]])
-        alldp.append([a[5],a[0],a[3],a[1],a[4],a[7]])
-        alldp.append([a[6],a[1],a[4],a[2],a[5],a[0]])
-        alldp.append([a[7],a[2],a[5],a[3],a[6],a[1]])
-        alldp.append([a[0],a[3],a[6],a[4],a[7],a[2]])
-        alldp.append([a[1],a[4],a[7],a[5],a[0],a[3]])
-        alldp.append([a[2],a[5],a[0],a[6],a[1],a[4]])
-        alldp.append([a[3],a[6],a[1],a[7],a[2],a[5]])
+        p4OfEachDay = ["English1","History2","Math3","French4","Art5","Free6","Free7","CS8"]
+        wholeCycle.append([p4OfEachDay[4],p4OfEachDay[7],p4OfEachDay[2],p4OfEachDay[0],p4OfEachDay[3],p4OfEachDay[6]])
+        wholeCycle.append([p4OfEachDay[5],p4OfEachDay[0],p4OfEachDay[3],p4OfEachDay[1],p4OfEachDay[4],p4OfEachDay[7]])
+        wholeCycle.append([p4OfEachDay[6],p4OfEachDay[1],p4OfEachDay[4],p4OfEachDay[2],p4OfEachDay[5],p4OfEachDay[0]])
+        wholeCycle.append([p4OfEachDay[7],p4OfEachDay[2],p4OfEachDay[5],p4OfEachDay[3],p4OfEachDay[6],p4OfEachDay[1]])
+        wholeCycle.append([p4OfEachDay[0],p4OfEachDay[3],p4OfEachDay[6],p4OfEachDay[4],p4OfEachDay[7],p4OfEachDay[2]])
+        wholeCycle.append([p4OfEachDay[1],p4OfEachDay[4],p4OfEachDay[7],p4OfEachDay[5],p4OfEachDay[0],p4OfEachDay[3]])
+        wholeCycle.append([p4OfEachDay[2],p4OfEachDay[5],p4OfEachDay[0],p4OfEachDay[6],p4OfEachDay[1],p4OfEachDay[4]])
+        wholeCycle.append([p4OfEachDay[3],p4OfEachDay[6],p4OfEachDay[1],p4OfEachDay[7],p4OfEachDay[2],p4OfEachDay[5]])
     }
     
+    //returns a page (dataViewController) for the given index
     func viewControllerAtIndex(_ index: Int, storyboard: UIStoryboard) -> DataViewController? {
-        // Return the data view controller for the given index.
-        if (self.d.count == 0) || (index >= self.d.count) {
+        
+        //if there's no stuff in the data array, or no more stuff in the array to display, return nil
+        if (self.schoolDaysInfo.count == 0) || (index >= self.schoolDaysInfo.count) {
             return nil
         }
 
-        // Create a new view controller and pass suitable data.
+        // Create a new view controller and pass data to the viewcontroller object's instance variables
         let dataViewController = storyboard.instantiateViewController(withIdentifier: "DataViewController") as! DataViewController
-        dataViewController.day = self.d[index][4]
-        dataViewController.indexpage = self.d[index][5]
-        dataViewController.completedate = "Day \(self.d[index][4]), \(self.d[index][0])/\(self.d[index][1])/\(self.d[index][2])"
-        dataViewController.all = alldp
+        dataViewController.todayDayType = self.schoolDaysInfo[index][6]
+        dataViewController.day = self.schoolDaysInfo[index][5]
+        dataViewController.indexpage = self.schoolDaysInfo[index][0]
+        dataViewController.completedate = "Day \(self.schoolDaysInfo[index][5]), \(self.schoolDaysInfo[index][1])/\(self.schoolDaysInfo[index][2])/\(self.schoolDaysInfo[index][3])"
+        dataViewController.all = wholeCycle
         return dataViewController
     }
 
+    //return the dataviewcontroller object's instance variable "indexpage"
     func indexOfViewController(_ viewController: DataViewController) -> Int {
-        // Return the index of the given data view controller.
-        // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
-        
         return viewController.indexpage
     }
 
+    
     // MARK: - Page View Controller Data Source
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -82,7 +96,8 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
         }
         
         index += 1
-        if index == self.d.count {
+        //if there's no more data to display, stops returning pages
+        if index == self.schoolDaysInfo.count {
             return nil
         }
         return self.viewControllerAtIndex(index, storyboard: viewController.storyboard!)

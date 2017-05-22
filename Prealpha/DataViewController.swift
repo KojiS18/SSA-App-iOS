@@ -12,14 +12,17 @@ class DataViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
 
     
-    @IBOutlet var date: UILabel!
-    @IBOutlet var ipage: UILabel!
-    @IBOutlet var dayn: UILabel!
+    
+    @IBOutlet var completeDateLabel: UILabel!
+    @IBOutlet var pageIndexLabel: UILabel!
+    @IBOutlet var cycleDayLabel: UILabel!
     
     var day: Int = 1
     var indexpage: Int = 0
     var completedate: String = ""
     var all: [[String]] = []
+    var todayDayType: Int = 0
+    var todayCycleDay: Int = 0
 
     @IBOutlet var tv: UITableView!
     
@@ -38,9 +41,9 @@ class DataViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.dayn!.text = String(day)
-        self.ipage!.text = String(indexpage)
-        self.date!.text = completedate
+        self.cycleDayLabel!.text = String(day)
+        self.pageIndexLabel!.text = String(indexpage)
+        self.completeDateLabel!.text = completedate
         
     }
     
@@ -54,6 +57,7 @@ class DataViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "pcell", for: indexPath) as! PeriodCell
         switch indexPath.row{
@@ -74,6 +78,8 @@ class DataViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.wclass.text = all[day-1][5]
         default: cell.whichperiod.text = "Period 0"
             cell.wclass.text = "error"
+            
+            
         }
         
         return cell

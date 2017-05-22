@@ -108,9 +108,9 @@
                         <color key="backgroundColor" red="0.97826086960000003" green="0.91848131079999995" blue="0.73914263440000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="date" destination="XKc-rV-Dz6" id="Q1q-Eh-tHU"/>
-                        <outlet property="dayn" destination="ERf-Xt-ldR" id="HeT-L3-a9g"/>
-                        <outlet property="ipage" destination="h68-rg-hFV" id="94p-2N-mxx"/>
+                        <outlet property="completeDateLabel" destination="XKc-rV-Dz6" id="ahV-WA-UJg"/>
+                        <outlet property="cycleDayLabel" destination="ERf-Xt-ldR" id="Vn9-W2-Ycd"/>
+                        <outlet property="pageIndexLabel" destination="h68-rg-hFV" id="geC-q3-mQL"/>
                         <outlet property="tv" destination="8P5-ZG-ebH" id="5Hm-10-NNV"/>
                     </connections>
                 </viewController>
