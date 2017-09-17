@@ -1,12 +1,14 @@
 
-
 import UIKit
 
 
-class TeacherViewController: UIViewController {
-
+class NewsViewController: UIViewController {
+    
+    
     
     @IBOutlet weak var web: UIWebView!
+    
+
     
     @IBAction func back(_ sender: UIBarButtonItem) {
         web.goBack()
@@ -16,9 +18,15 @@ class TeacherViewController: UIViewController {
         web.goForward()
     }
     
+    @IBAction func openSafari(_ sender: UIBarButtonItem) {
+        UIApplication.shared.openURL(URL(string: "https://www.shadysideacademy.org/about/news")!)
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        web.isUserInteractionEnabled = true
         
         
         
@@ -26,7 +34,7 @@ class TeacherViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        let myURL = URL(string: "https://www.shadysideacademy.org/students/ms-ss-student-portal")
+        let myURL = URL(string: "https://www.shadysideacademy.org/about/news")
         let myRequest = URLRequest(url: myURL!)
         web.loadRequest(myRequest)
     }

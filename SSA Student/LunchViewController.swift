@@ -1,20 +1,27 @@
 
-
 import UIKit
 
 
-class TeacherViewController: UIViewController {
-
+class LunchViewController: UIViewController {
+    
     
     @IBOutlet weak var web: UIWebView!
+    
+
     
     @IBAction func back(_ sender: UIBarButtonItem) {
         web.goBack()
     }
     
+    
     @IBAction func forward(_ sender: UIBarButtonItem) {
         web.goForward()
     }
+    
+    @IBAction func openSafari(_ sender: UIBarButtonItem) {
+        UIApplication.shared.openURL(URL(string: "https://www.shadysideacademy.org/lunch-menus")!)
+    }
+    
     
     
     override func viewDidLoad() {
@@ -26,7 +33,7 @@ class TeacherViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        let myURL = URL(string: "https://www.shadysideacademy.org/students/ms-ss-student-portal")
+        let myURL = URL(string: "https://www.shadysideacademy.org/lunch-menus")
         let myRequest = URLRequest(url: myURL!)
         web.loadRequest(myRequest)
     }
