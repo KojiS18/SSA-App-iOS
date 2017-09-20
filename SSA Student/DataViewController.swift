@@ -8,7 +8,11 @@
 
 import UIKit
 
-class DataViewController: UIViewController {
+
+let pressEditButtonKey = "key"
+
+
+class DataViewController: UIViewController, UIGestureRecognizerDelegate {
     //var currentPage: Int = 0
     //@IBOutlet weak var dataLabel: UILabel!
     //var dataObject: String = ""
@@ -55,6 +59,8 @@ class DataViewController: UIViewController {
         containerView1.distribution = .fillEqually
         //containerView1.spacing = 25
         self.view.addSubview(containerView1)
+        let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(longTap(_:)))
+        containerView1.addGestureRecognizer(longGesture)
         containerView1.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint(item: containerView1, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 60.0).isActive = true
         NSLayoutConstraint(item: containerView1, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: -45.0).isActive = true
@@ -595,6 +601,10 @@ class DataViewController: UIViewController {
         }
         return wholeCycle
         
+    }
+    
+    func longTap(_ sender: UIGestureRecognizer){
+                NotificationCenter.default.post(name: Notification.Name(rawValue: pressEditButtonKey), object: self)
     }
     
     

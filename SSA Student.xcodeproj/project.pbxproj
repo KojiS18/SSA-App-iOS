@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012A9FD21F71D26D002996AD /* SSACalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9FD11F71D26D002996AD /* SSACalendarViewController.swift */; };
+		012A9FD41F71D54D002996AD /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9FD31F71D54D002996AD /* FeedbackViewController.swift */; };
+		012A9FD61F71E075002996AD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9FD51F71E075002996AD /* AboutViewController.swift */; };
 		84104BC01F4E601C00CCF911 /* ChangeAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84104BBF1F4E601C00CCF911 /* ChangeAllTableViewController.swift */; };
 		84104BC81F4E60A600CCF911 /* ChangeAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84104BC71F4E60A600CCF911 /* ChangeAllTableViewCell.swift */; };
-		843F23111F6F3DD000376716 /* TeacherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F23101F6F3DD000376716 /* TeacherTableViewCell.swift */; };
 		844253751F45751E00A8D267 /* InputTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844253741F45751E00A8D267 /* InputTableViewController.swift */; };
 		844253791F457E3200A8D267 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844253781F457E3200A8D267 /* InputTableViewCell.swift */; };
 		8453F4611F660A44001B79DE /* InputTopbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453F4601F660A44001B79DE /* InputTopbarViewController.swift */; };
@@ -32,6 +34,7 @@
 		84C967591F66F991008DC01C /* ChangeOneTopbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C967581F66F991008DC01C /* ChangeOneTopbarViewController.swift */; };
 		84E43CC61F68123500A25CB9 /* inputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E43CC51F68123500A25CB9 /* inputProtocol.swift */; };
 		84E6E3241F6F1583006B09C5 /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E3231F6F1583006B09C5 /* LunchViewController.swift */; };
+		84E6E3261F6F15FD006B09C5 /* TeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E3251F6F15FD006B09C5 /* TeacherViewController.swift */; };
 		84E6E32A1F6F1620006B09C5 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E3291F6F1620006B09C5 /* NewsViewController.swift */; };
 		84E6E32C1F6F1632006B09C5 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E32B1F6F1632006B09C5 /* DailyViewController.swift */; };
 /* End PBXBuildFile section */
@@ -68,9 +71,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		012A9FD11F71D26D002996AD /* SSACalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSACalendarViewController.swift; sourceTree = "<group>"; };
+		012A9FD31F71D54D002996AD /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		012A9FD51F71E075002996AD /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		84104BBF1F4E601C00CCF911 /* ChangeAllTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAllTableViewController.swift; sourceTree = "<group>"; };
 		84104BC71F4E60A600CCF911 /* ChangeAllTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAllTableViewCell.swift; sourceTree = "<group>"; };
-		843F23101F6F3DD000376716 /* TeacherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewCell.swift; sourceTree = "<group>"; };
 		844253741F45751E00A8D267 /* InputTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewController.swift; sourceTree = "<group>"; };
 		844253781F457E3200A8D267 /* InputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
 		8453F4601F660A44001B79DE /* InputTopbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTopbarViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +100,7 @@
 		84C967581F66F991008DC01C /* ChangeOneTopbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeOneTopbarViewController.swift; sourceTree = "<group>"; };
 		84E43CC51F68123500A25CB9 /* inputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inputProtocol.swift; sourceTree = "<group>"; };
 		84E6E3231F6F1583006B09C5 /* LunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
+		84E6E3251F6F15FD006B09C5 /* TeacherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherViewController.swift; sourceTree = "<group>"; };
 		84E6E3291F6F1620006B09C5 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		84E6E32B1F6F1632006B09C5 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +141,10 @@
 				8474E9841F18616300C116C3 /* DataViewController.swift */,
 				8474E9861F18616300C116C3 /* ModelController.swift */,
 				8474E9881F18616300C116C3 /* Main.storyboard */,
+				012A9FD11F71D26D002996AD /* SSACalendarViewController.swift */,
+				012A9FD51F71E075002996AD /* AboutViewController.swift */,
+				012A9FD31F71D54D002996AD /* FeedbackViewController.swift */,
+				84E6E3251F6F15FD006B09C5 /* TeacherViewController.swift */,
 				84E6E3291F6F1620006B09C5 /* NewsViewController.swift */,
 				84E6E32B1F6F1632006B09C5 /* DailyViewController.swift */,
 				84C7C39F1F675F5E005B941F /* ChangeOneTableViewController.swift */,
@@ -156,7 +166,6 @@
 				84104BC71F4E60A600CCF911 /* ChangeAllTableViewCell.swift */,
 				848633D91F4F239D00F4F94D /* BarCameraViewController.swift */,
 				84E6E3231F6F1583006B09C5 /* LunchViewController.swift */,
-				843F23101F6F3DD000376716 /* TeacherTableViewCell.swift */,
 			);
 			path = "SSA Student";
 			sourceTree = "<group>";
@@ -265,11 +274,13 @@
 			files = (
 				84C7C3A01F675F5E005B941F /* ChangeOneTableViewController.swift in Sources */,
 				844253751F45751E00A8D267 /* InputTableViewController.swift in Sources */,
+				012A9FD21F71D26D002996AD /* SSACalendarViewController.swift in Sources */,
+				012A9FD41F71D54D002996AD /* FeedbackViewController.swift in Sources */,
 				84E6E32A1F6F1620006B09C5 /* NewsViewController.swift in Sources */,
 				84C967591F66F991008DC01C /* ChangeOneTopbarViewController.swift in Sources */,
 				84C7C3A21F675F90005B941F /* ChangeOneRegularTableViewCell.swift in Sources */,
 				8453F4611F660A44001B79DE /* InputTopbarViewController.swift in Sources */,
-				843F23111F6F3DD000376716 /* TeacherTableViewCell.swift in Sources */,
+				84E6E3261F6F15FD006B09C5 /* TeacherViewController.swift in Sources */,
 				8474E9831F18616300C116C3 /* RootViewController.swift in Sources */,
 				84104BC01F4E601C00CCF911 /* ChangeAllTableViewController.swift in Sources */,
 				8474E9871F18616300C116C3 /* ModelController.swift in Sources */,
@@ -285,6 +296,7 @@
 				848C80D11F68DFDD00ABD614 /* ChangeOneProtocol.swift in Sources */,
 				84C7C3A41F675F9F005B941F /* ChangeOneP4TableViewCell.swift in Sources */,
 				848633DA1F4F239D00F4F94D /* BarCameraViewController.swift in Sources */,
+				012A9FD61F71E075002996AD /* AboutViewController.swift in Sources */,
 				84E6E3241F6F1583006B09C5 /* LunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,7 +444,7 @@
 				INFOPLIST_FILE = "SSA Student/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = myself.SSAStudent;
+				PRODUCT_BUNDLE_IDENTIFIER = "need-change";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -446,7 +458,7 @@
 				INFOPLIST_FILE = "SSA Student/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = myself.SSAStudent;
+				PRODUCT_BUNDLE_IDENTIFIER = "need-change";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

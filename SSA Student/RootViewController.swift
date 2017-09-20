@@ -311,6 +311,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+            NotificationCenter.default.addObserver(self, selector: #selector(settingsPressed(_:)), name: NSNotification.Name(rawValue: pressEditButtonKey), object: nil)
         
         
         
