@@ -1,11 +1,11 @@
 
 import UIKit
+import WebKit
 
-
-class LunchViewController: UIViewController {
+class LunchViewController: UIViewController, WKUIDelegate{
     
     
-    @IBOutlet weak var web: UIWebView!
+    var web: WKWebView!
     
 
     
@@ -22,12 +22,26 @@ class LunchViewController: UIViewController {
         UIApplication.shared.openURL(URL(string: "https://www.shadysideacademy.org/lunch-menus")!)
     }
     
-    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+        if navigationAction.targetFrame == nil {
+            webView.load(navigationAction.request)
+        }
+        return nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let minx = self.view.bounds.minX
+        let miny = self.view.bounds.minY
+        let maxx = self.view.bounds.maxX
+        let maxy = self.view.bounds.maxY - 49
+        let frame = CGRect(x: minx, y: miny, width: maxx-minx, height: maxy-miny)
+        web = WKWebView(frame: frame)
+        self.web.uiDelegate = self
+        web!.isUserInteractionEnabled = true
         
-        
+        self.view.addSubview(web!)
+        self.view.sendSubview(toBack: web!)
         
         
         // Do any additional setup after loading the view.
@@ -35,7 +49,7 @@ class LunchViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let myURL = URL(string: "https://www.shadysideacademy.org/lunch-menus")
         let myRequest = URLRequest(url: myURL!)
-        web.loadRequest(myRequest)
+        web.load(myRequest)
     }
     
     override func didReceiveMemoryWarning() {

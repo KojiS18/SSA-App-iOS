@@ -192,6 +192,9 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         }
         //print("below is get today index")
         //print(index as Any)
+        let cycleDayToSave = schoolDays[index!][5]
+        let defaults:UserDefaults = UserDefaults.standard
+        defaults.set(cycleDayToSave, forKey: "today")
         return index!
     }
     
@@ -282,6 +285,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
             self._modelController?.wholeCycle = a
             //print("wholeupdated")
         }
+        self._modelController?.updateFriends()
         /*
         print("***")
         print(currentPage)
@@ -297,6 +301,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
             self.pageViewController!.setViewControllers(viewControllers, direction: .forward, animated: false, completion: {done in })
         } else {
             currentPage = getTodayIndex()
+            
             let currentViewController: DataViewController = self.modelController.viewControllerAtIndex(currentPage, storyboard: self.storyboard!)!
             let viewControllers = [currentViewController]
             
@@ -311,7 +316,20 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-            NotificationCenter.default.addObserver(self, selector: #selector(settingsPressed(_:)), name: NSNotification.Name(rawValue: pressEditButtonKey), object: nil)
+        //Checks if app has launced before
+        if (UserDefaults.standard.bool(forKey: "launchedBefore")) {
+            // This code will be run if the app has been launced before
+            
+        } else {
+            // This code will be run if this is the first time the app is running
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            //Creates arrays stored in UserDefaults to be used by Planner function of the app
+            UserDefaults.standard.set(["This is your digital planner!","Delete items by swiping them to the left", "Press add to add assignments"], forKey: "AssignmentNamesArray")
+            UserDefaults.standard.set([Date(), Date(), Date()], forKey: "AssignmentDueDateArray")
+            UserDefaults.standard.set([0, 0, 0], forKey: "AssignmentClassArray")
+            UserDefaults.standard.set(["These are your notes! Add assignment notes here.", "These are your notes! Add assignment notes here.", "These are your notes! Add assignment notes here."], forKey: "AssignmentNotesArray")
+            UserDefaults.standard.synchronize()
+        }
         
         
         
@@ -351,7 +369,8 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         
         // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
         
-        var pageViewRect = CGRect(x: 0, y: 64, width: self.view.bounds.width, height: self.view.bounds.height-113)
+        var pageViewRect = CGRect(x: 0, y: 64, width: self.view.bounds.width, height: self.view.bounds.height-49)
+        
         
         if UIDevice.current.userInterfaceIdiom == .pad {
             pageViewRect = pageViewRect.insetBy(dx: 40.0, dy: 40.0)

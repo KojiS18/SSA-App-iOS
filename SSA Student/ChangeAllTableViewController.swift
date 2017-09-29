@@ -56,6 +56,8 @@ class ChangeAllTableViewController: UITableViewController, inputProtocol {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -72,16 +74,30 @@ class ChangeAllTableViewController: UITableViewController, inputProtocol {
         // #warning Incomplete implementation, return the number of rows
         return 8
     }
+    override func tableView(_ tableView: UITableView,
+                   titleForHeaderInSection section: Int) -> String? {
+        return "Leave blank if free"
+    }
+    override func tableView(_ tableView: UITableView,
+                            titleForFooterInSection section: Int) -> String? {
+        return "Leave blank if free"
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let a: CGFloat = 212.0
+        return a
+    }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "allcell", for: indexPath) as! ChangeAllTableViewCell
-        
+        //cell.isUserInteractionEnabled = true
         cell.cellDelegate = self
         
+        //cell.sendSubview(toBack: cell.contentView)
+        //cell.bringSubview(toFront: cell.contentView)
         cell.selectionStyle = .none
         
-        cell.dayNNum.text = String(indexPath.row + 1)
+        cell.dayNNum.text = "Day \(indexPath.row + 1) Period 4 "
         //cell.isFree.setOn(false,animated: false)
         cell.row = indexPath.row
         cell.nameOfPeriod.text = names[indexPath.row]

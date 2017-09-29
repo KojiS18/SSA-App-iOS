@@ -12,6 +12,9 @@ import AVFoundation
 
 class BarcodeViewController: UIViewController, UITextFieldDelegate {
     
+    
+    @IBOutlet weak var vcname: UILabel!
+    
     @IBOutlet weak var topbar: UIImageView!
     var barImage: UIImageView? = nil
     @IBAction func dismissKeyboard(_ sender: UIButton) {
@@ -65,8 +68,18 @@ class BarcodeViewController: UIViewController, UITextFieldDelegate {
     var currentBrightness: CGFloat = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
+        if self.view.bounds.width == 320 {
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named:"SSA_BG1_IOS (640x1136)")!)
+            
+        } else if self.view.bounds.width == 375 {
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named:"SSA_BG1_IOS (750x1334)")!)
+            
+        } else {
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named:"SSA_BG1_IOs (1242x2208)")!)
+            
+        }
         let color: UIColor = UIColor(red: (29/255.0), green: (54/255.0), blue: (95/255.0), alpha: 1.0)
-        let rect = CGRect(origin: CGPoint(x: 0, y:0), size: CGSize(width: self.view.bounds.width, height: 44))
+        let rect = CGRect(origin: CGPoint(x: 0, y:0), size: CGSize(width: self.view.bounds.width, height: 64))
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()!
         context.setFillColor(color.cgColor)
@@ -74,6 +87,7 @@ class BarcodeViewController: UIViewController, UITextFieldDelegate {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         self.topbar.image = image!
+        self.view.bringSubview(toFront: topbar)
         self.a.delegate = self
         a.keyboardType = .numberPad
         
@@ -120,6 +134,7 @@ class BarcodeViewController: UIViewController, UITextFieldDelegate {
         
     }
     override func viewWillDisappear(_ animated: Bool) {
+        
         let max: CGFloat = 1.0
         if UIScreen.main.brightness == max{
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -200,6 +215,7 @@ class BarcodeViewController: UIViewController, UITextFieldDelegate {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        self.view.bringSubview(toFront: vcname)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.bright = UIScreen.main.brightness
         if let str = readBarcode() {

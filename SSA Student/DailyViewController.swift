@@ -1,18 +1,26 @@
 
 
 import UIKit
-
+import WebKit
 
 class DailyViewController: UIViewController {
     
     
-    
-    @IBOutlet weak var web: UIWebView!
+    var web: WKWebView?
+   
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        web.isUserInteractionEnabled = true
+        let minx = self.view.bounds.minX
+        let miny = self.view.bounds.minY
+        let maxx = self.view.bounds.maxX
+        let maxy = self.view.bounds.maxY - 49
+        let frame = CGRect(x: minx, y: miny, width: maxx-minx, height: maxy-miny)
+        web = WKWebView(frame: frame)
+       
+        web!.isUserInteractionEnabled = true
+        self.view.addSubview(web!)
         
         
         
@@ -20,9 +28,9 @@ class DailyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        let myURL = URL(string: "https://sites.google.com/site/ssamobilehelper/schooldaysinfo/Daily%20Bulletin.png?attredirects=0&d=1")
+        let myURL = URL(string: "https://sites.google.com/site/ssamobilehelper/schooldaysinfo/Daily%20Bulletin.pdf?attredirects=0&d=1")
         let myRequest = URLRequest(url: myURL!)
-        web.loadRequest(myRequest)
+        web!.load(myRequest)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

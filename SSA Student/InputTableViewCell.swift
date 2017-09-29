@@ -12,13 +12,19 @@ class InputTableViewCell: UITableViewCell {
 
     public var cellDelegate: inputProtocol!
     var row: Int = -1
+    
+    
     @IBOutlet weak var dayNNum: UILabel!
     
+
     @IBOutlet weak var nameOfPeriod: UITextField!
+    
     
    // @IBOutlet weak var isFree: UISwitch!
     
     @IBOutlet weak var ABorBC: UISegmentedControl!
+    
+    
     
     @IBOutlet weak var NorSci: UISegmentedControl!
     
@@ -71,8 +77,18 @@ class InputTableViewCell: UITableViewCell {
         }
     }
     */
+ 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        //self.contentView.isUserInteractionEnabled = true
+        self.contentView.bringSubview(toFront: nameOfPeriod)
+        //nameOfPeriod.isUserInteractionEnabled = true
+        self.contentView.bringSubview(toFront: ABorBC)
+        //self.contentView.
+        self.contentView.bringSubview(toFront: NorSci)
+        //self.sendSubview(toBack: self.contentView)
+        
         // Initialization code
     }
 

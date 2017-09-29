@@ -29,6 +29,9 @@ class ChangeOneTableViewController: UITableViewController, ChangeOneProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.allowsSelection = false
+        
+        //self.view.sendSubview(toBack: (self.tableView.footerView(forSection: 0))!.contentView)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -52,11 +55,13 @@ class ChangeOneTableViewController: UITableViewController, ChangeOneProtocol {
         // #warning Incomplete implementation, return the number of rows
         return 6
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row != 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "regular", for: indexPath) as! ChangeOneRegularTableViewCell
+            //cell.isUserInteractionEnabled = true
+            //cell.bringSubview(toFront: cell.contentView)
             cell.cellDelegate = self
             cell.dayPeriod.text = "Period \(indexPath.row+1) Day \(dayN)"
             cell.nameOfPeriod.text = names[indexPath.row]
@@ -64,6 +69,8 @@ class ChangeOneTableViewController: UITableViewController, ChangeOneProtocol {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "p4", for: indexPath) as! ChangeOneP4TableViewCell
+            //cell.isUserInteractionEnabled = true
+            cell.bringSubview(toFront: cell.contentView)
             cell.cellDelegate = self
             cell.dayPeriod.text = "Period \(indexPath.row+1) Day \(dayN)"
             cell.nameOfPeriod.text = names[3]

@@ -1,21 +1,21 @@
 
 import UIKit
-
+import WebKit
 
 class NewsViewController: UIViewController {
     
     
     
-    @IBOutlet weak var web: UIWebView!
+    var web: WKWebView?
     
 
     
     @IBAction func back(_ sender: UIBarButtonItem) {
-        web.goBack()
+        web!.goBack()
     }
     
     @IBAction func forward(_ sender: UIBarButtonItem) {
-        web.goForward()
+        web!.goForward()
     }
     
     @IBAction func openSafari(_ sender: UIBarButtonItem) {
@@ -26,7 +26,18 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        web.isUserInteractionEnabled = true
+        
+        
+        let minx = self.view.bounds.minX
+        let miny = self.view.bounds.minY
+        let maxx = self.view.bounds.maxX
+        let maxy = self.view.bounds.maxY - 49
+        let frame = CGRect(x: minx, y: miny, width: maxx-minx, height: maxy-miny)
+        web = WKWebView(frame: frame)
+        web!.isUserInteractionEnabled = true
+        //web!.isUserInteractionEnabled = true
+        self.view.addSubview(web!)
+        self.view.sendSubview(toBack: web!)
         
         
         
@@ -36,7 +47,7 @@ class NewsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let myURL = URL(string: "https://www.shadysideacademy.org/about/news")
         let myRequest = URLRequest(url: myURL!)
-        web.loadRequest(myRequest)
+        web!.load(myRequest)
     }
     
     override func didReceiveMemoryWarning() {

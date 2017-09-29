@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		012A9FD21F71D26D002996AD /* SSACalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9FD11F71D26D002996AD /* SSACalendarViewController.swift */; };
-		012A9FD41F71D54D002996AD /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9FD31F71D54D002996AD /* FeedbackViewController.swift */; };
-		012A9FD61F71E075002996AD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A9FD51F71E075002996AD /* AboutViewController.swift */; };
+		018B2A221F7C161500ECDD18 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B2A211F7C161500ECDD18 /* PlannerViewController.swift */; };
+		018B2A271F7C1C3C00ECDD18 /* NewAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B2A251F7C1C3C00ECDD18 /* NewAssignmentViewController.swift */; };
+		018B2A281F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B2A261F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift */; };
 		84104BC01F4E601C00CCF911 /* ChangeAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84104BBF1F4E601C00CCF911 /* ChangeAllTableViewController.swift */; };
 		84104BC81F4E60A600CCF911 /* ChangeAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84104BC71F4E60A600CCF911 /* ChangeAllTableViewCell.swift */; };
+		843F23111F6F3DD000376716 /* TeacherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F23101F6F3DD000376716 /* TeacherTableViewCell.swift */; };
 		844253751F45751E00A8D267 /* InputTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844253741F45751E00A8D267 /* InputTableViewController.swift */; };
 		844253791F457E3200A8D267 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844253781F457E3200A8D267 /* InputTableViewCell.swift */; };
 		8453F4611F660A44001B79DE /* InputTopbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8453F4601F660A44001B79DE /* InputTopbarViewController.swift */; };
+		8463A9331F734E3200C7ED2B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463A9321F734E3200C7ED2B /* MapViewController.swift */; };
 		846D2E0F1F1A6432002D52CE /* PeriodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D2E0E1F1A6432002D52CE /* PeriodCell.swift */; };
 		8474E9811F18616300C116C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474E9801F18616300C116C3 /* AppDelegate.swift */; };
 		8474E9831F18616300C116C3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474E9821F18616300C116C3 /* RootViewController.swift */; };
@@ -32,11 +34,14 @@
 		84C7C3A41F675F9F005B941F /* ChangeOneP4TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7C3A31F675F9F005B941F /* ChangeOneP4TableViewCell.swift */; };
 		84C967571F66F933008DC01C /* ChangeAllTopbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C967561F66F933008DC01C /* ChangeAllTopbarViewController.swift */; };
 		84C967591F66F991008DC01C /* ChangeOneTopbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C967581F66F991008DC01C /* ChangeOneTopbarViewController.swift */; };
+		84E415E91F748EAF00A84023 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E415E81F748EAF00A84023 /* FeedbackViewController.swift */; };
 		84E43CC61F68123500A25CB9 /* inputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E43CC51F68123500A25CB9 /* inputProtocol.swift */; };
 		84E6E3241F6F1583006B09C5 /* LunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E3231F6F1583006B09C5 /* LunchViewController.swift */; };
-		84E6E3261F6F15FD006B09C5 /* TeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E3251F6F15FD006B09C5 /* TeacherViewController.swift */; };
 		84E6E32A1F6F1620006B09C5 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E3291F6F1620006B09C5 /* NewsViewController.swift */; };
 		84E6E32C1F6F1632006B09C5 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6E32B1F6F1632006B09C5 /* DailyViewController.swift */; };
+		84EF4D561F792F3D001CB1A3 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF4D551F792F3D001CB1A3 /* QRReaderViewController.swift */; };
+		84F4FA5C1F76C56300AEB21A /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4FA5B1F76C56300AEB21A /* FriendsTableViewController.swift */; };
+		84F4FA5F1F76E75A00AEB21A /* AddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4FA5E1F76E75A00AEB21A /* AddFriendsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,14 +76,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		012A9FD11F71D26D002996AD /* SSACalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSACalendarViewController.swift; sourceTree = "<group>"; };
-		012A9FD31F71D54D002996AD /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
-		012A9FD51F71E075002996AD /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		018B2A211F7C161500ECDD18 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
+		018B2A251F7C1C3C00ECDD18 /* NewAssignmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAssignmentViewController.swift; sourceTree = "<group>"; };
+		018B2A261F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCellViewController.swift; sourceTree = "<group>"; };
 		84104BBF1F4E601C00CCF911 /* ChangeAllTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAllTableViewController.swift; sourceTree = "<group>"; };
 		84104BC71F4E60A600CCF911 /* ChangeAllTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAllTableViewCell.swift; sourceTree = "<group>"; };
+		843F23101F6F3DD000376716 /* TeacherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewCell.swift; sourceTree = "<group>"; };
 		844253741F45751E00A8D267 /* InputTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewController.swift; sourceTree = "<group>"; };
 		844253781F457E3200A8D267 /* InputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
 		8453F4601F660A44001B79DE /* InputTopbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTopbarViewController.swift; sourceTree = "<group>"; };
+		8463A9321F734E3200C7ED2B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		846D2E0E1F1A6432002D52CE /* PeriodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodCell.swift; sourceTree = "<group>"; };
 		8474E97D1F18616300C116C3 /* SSA Student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSA Student.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8474E9801F18616300C116C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,11 +105,14 @@
 		84C7C3A31F675F9F005B941F /* ChangeOneP4TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeOneP4TableViewCell.swift; sourceTree = "<group>"; };
 		84C967561F66F933008DC01C /* ChangeAllTopbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAllTopbarViewController.swift; sourceTree = "<group>"; };
 		84C967581F66F991008DC01C /* ChangeOneTopbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeOneTopbarViewController.swift; sourceTree = "<group>"; };
+		84E415E81F748EAF00A84023 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		84E43CC51F68123500A25CB9 /* inputProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inputProtocol.swift; sourceTree = "<group>"; };
 		84E6E3231F6F1583006B09C5 /* LunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewController.swift; sourceTree = "<group>"; };
-		84E6E3251F6F15FD006B09C5 /* TeacherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherViewController.swift; sourceTree = "<group>"; };
 		84E6E3291F6F1620006B09C5 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		84E6E32B1F6F1632006B09C5 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
+		84EF4D551F792F3D001CB1A3 /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
+		84F4FA5B1F76C56300AEB21A /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		84F4FA5E1F76E75A00AEB21A /* AddFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,10 +151,13 @@
 				8474E9841F18616300C116C3 /* DataViewController.swift */,
 				8474E9861F18616300C116C3 /* ModelController.swift */,
 				8474E9881F18616300C116C3 /* Main.storyboard */,
-				012A9FD11F71D26D002996AD /* SSACalendarViewController.swift */,
-				012A9FD51F71E075002996AD /* AboutViewController.swift */,
-				012A9FD31F71D54D002996AD /* FeedbackViewController.swift */,
-				84E6E3251F6F15FD006B09C5 /* TeacherViewController.swift */,
+				018B2A211F7C161500ECDD18 /* PlannerViewController.swift */,
+				018B2A261F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift */,
+				018B2A251F7C1C3C00ECDD18 /* NewAssignmentViewController.swift */,
+				84F4FA5E1F76E75A00AEB21A /* AddFriendsViewController.swift */,
+				84F4FA5B1F76C56300AEB21A /* FriendsTableViewController.swift */,
+				84E415E81F748EAF00A84023 /* FeedbackViewController.swift */,
+				8463A9321F734E3200C7ED2B /* MapViewController.swift */,
 				84E6E3291F6F1620006B09C5 /* NewsViewController.swift */,
 				84E6E32B1F6F1632006B09C5 /* DailyViewController.swift */,
 				84C7C39F1F675F5E005B941F /* ChangeOneTableViewController.swift */,
@@ -166,6 +179,8 @@
 				84104BC71F4E60A600CCF911 /* ChangeAllTableViewCell.swift */,
 				848633D91F4F239D00F4F94D /* BarCameraViewController.swift */,
 				84E6E3231F6F1583006B09C5 /* LunchViewController.swift */,
+				843F23101F6F3DD000376716 /* TeacherTableViewCell.swift */,
+				84EF4D551F792F3D001CB1A3 /* QRReaderViewController.swift */,
 			);
 			path = "SSA Student";
 			sourceTree = "<group>";
@@ -216,6 +231,7 @@
 				TargetAttributes = {
 					8474E97C1F18616300C116C3 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = J9JGHQ4T9V;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -274,18 +290,22 @@
 			files = (
 				84C7C3A01F675F5E005B941F /* ChangeOneTableViewController.swift in Sources */,
 				844253751F45751E00A8D267 /* InputTableViewController.swift in Sources */,
-				012A9FD21F71D26D002996AD /* SSACalendarViewController.swift in Sources */,
-				012A9FD41F71D54D002996AD /* FeedbackViewController.swift in Sources */,
+				84F4FA5C1F76C56300AEB21A /* FriendsTableViewController.swift in Sources */,
 				84E6E32A1F6F1620006B09C5 /* NewsViewController.swift in Sources */,
+				84E415E91F748EAF00A84023 /* FeedbackViewController.swift in Sources */,
 				84C967591F66F991008DC01C /* ChangeOneTopbarViewController.swift in Sources */,
 				84C7C3A21F675F90005B941F /* ChangeOneRegularTableViewCell.swift in Sources */,
 				8453F4611F660A44001B79DE /* InputTopbarViewController.swift in Sources */,
-				84E6E3261F6F15FD006B09C5 /* TeacherViewController.swift in Sources */,
+				843F23111F6F3DD000376716 /* TeacherTableViewCell.swift in Sources */,
+				8463A9331F734E3200C7ED2B /* MapViewController.swift in Sources */,
+				018B2A221F7C161500ECDD18 /* PlannerViewController.swift in Sources */,
 				8474E9831F18616300C116C3 /* RootViewController.swift in Sources */,
 				84104BC01F4E601C00CCF911 /* ChangeAllTableViewController.swift in Sources */,
+				84EF4D561F792F3D001CB1A3 /* QRReaderViewController.swift in Sources */,
 				8474E9871F18616300C116C3 /* ModelController.swift in Sources */,
 				84E43CC61F68123500A25CB9 /* inputProtocol.swift in Sources */,
 				8474E9851F18616300C116C3 /* DataViewController.swift in Sources */,
+				84F4FA5F1F76E75A00AEB21A /* AddFriendsViewController.swift in Sources */,
 				84C967571F66F933008DC01C /* ChangeAllTopbarViewController.swift in Sources */,
 				84E6E32C1F6F1632006B09C5 /* DailyViewController.swift in Sources */,
 				846D2E0F1F1A6432002D52CE /* PeriodCell.swift in Sources */,
@@ -294,9 +314,10 @@
 				844253791F457E3200A8D267 /* InputTableViewCell.swift in Sources */,
 				84B047361F2E5E130060A6CD /* BarcodeViewController.swift in Sources */,
 				848C80D11F68DFDD00ABD614 /* ChangeOneProtocol.swift in Sources */,
+				018B2A281F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift in Sources */,
+				018B2A271F7C1C3C00ECDD18 /* NewAssignmentViewController.swift in Sources */,
 				84C7C3A41F675F9F005B941F /* ChangeOneP4TableViewCell.swift in Sources */,
 				848633DA1F4F239D00F4F94D /* BarCameraViewController.swift in Sources */,
-				012A9FD61F71E075002996AD /* AboutViewController.swift in Sources */,
 				84E6E3241F6F1583006B09C5 /* LunchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,12 +461,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9JGHQ4T9V;
 				INFOPLIST_FILE = "SSA Student/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "need-change";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nickzanamedia.SSAStudent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -454,12 +478,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J9JGHQ4T9V;
 				INFOPLIST_FILE = "SSA Student/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "need-change";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nickzanamedia.SSAStudent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

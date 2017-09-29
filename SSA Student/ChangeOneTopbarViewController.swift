@@ -9,6 +9,9 @@
 import UIKit
 
 class ChangeOneTopbarViewController: UIViewController {
+    
+    @IBOutlet weak var nameOfVC: UILabel!
+    
     var child: ChangeOneTableViewController?
     var whole: [[String]] = []
     var dayN: Int = 1
@@ -46,6 +49,7 @@ class ChangeOneTopbarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.nameOfVC.text = "Change Day \(dayN)"
         let stb = UIStoryboard(name: "Main", bundle: nil)
         
         self.child = (stb.instantiateViewController(withIdentifier: "changeone") as! ChangeOneTableViewController)
