@@ -153,7 +153,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             <connections>
                                                 <action selector="endEdit:" destination="MoF-tP-1hZ" eventType="editingDidEnd" id="zHi-Zn-sZh"/>
                                             </connections>
@@ -1258,7 +1258,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             <connections>
                                                 <action selector="endEdit:" destination="8zH-O0-59G" eventType="editingDidEnd" id="TvF-tE-clK"/>
                                             </connections>
@@ -1300,7 +1300,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             <connections>
                                                 <action selector="endEdit:" destination="xiy-17-hl3" eventType="editingDidEnd" id="4o5-zy-CaA"/>
                                             </connections>
@@ -1504,7 +1504,7 @@
                                 <string key="text">(c) Shady Side Academy CS Club 
 Contact us at: ssamobiledevs@gmail.com
 
-CS Club Personel
+CS Club Personnel
 President – Henry Friedlander
 Vice President and Lead Android Developer – Fuad Youssef
 Lead iOS Developer – Peter Wang
@@ -1573,7 +1573,7 @@ Design based on the SSA Mobile created by David Franklin and Colin Mason</string
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                             <connections>
                                                 <action selector="endEdit:" destination="cKy-Nd-xdt" eventType="editingDidEnd" id="5Tf-sk-Ys0"/>
                                             </connections>

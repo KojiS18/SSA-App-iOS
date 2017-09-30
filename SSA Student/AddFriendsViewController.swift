@@ -252,10 +252,10 @@ class AddFriendsViewController: UIViewController, UITextFieldDelegate {
             warning.isHidden = true
             ownTextCode.adjustsFontSizeToFitWidth = true
             ownTextCode.minimumFontSize = 10.0
-            let start = t.index(t.startIndex, offsetBy: 30)
-            let shortEnoughForDisplay = t.substring(to: start)
-            ownTextCode.text = shortEnoughForDisplay + "..."
-            let data = t.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
+            //let start = t.index(t.startIndex, offsetBy: 30)
+            //let shortEnoughForDisplay = t.substring(to: start)
+            //ownTextCode.text = shortEnoughForDisplay + "..."
+            let data = t.data(using: String.Encoding.utf8, allowLossyConversion: false)
             
             let filter = CIFilter(name: "CIQRCodeGenerator")!
             
