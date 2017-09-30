@@ -16,7 +16,7 @@ class NewAssignmentViewController: UIViewController, UIPickerViewDataSource, UIP
     
     @IBOutlet weak var classPicker: UIPickerView!
     @IBOutlet weak var dueDatePicker: UIDatePicker!
-    var array:Array = [C1Name, C2Name, C3Name, C4Name, C5Name, C6Name]
+    var array:Array = UserDefaults.standard.array(forKey: "ClassNamesArray")!
     var selectedClassValue:Int = 0
     var clickedCellPath:Int = 2
     var dueDate:Date = Date()
@@ -74,7 +74,7 @@ class NewAssignmentViewController: UIViewController, UIPickerViewDataSource, UIP
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return array[row]
+        return array[row] as! String
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -120,6 +120,10 @@ class NewAssignmentViewController: UIViewController, UIPickerViewDataSource, UIP
         UserDefaults.standard.synchronize()
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        array = UserDefaults.standard.array(forKey: "ClassNamesArray")! as! [String]
     }
     
     override func viewWillDisappear(_ animated: Bool) {

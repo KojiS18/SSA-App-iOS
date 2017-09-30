@@ -7,17 +7,6 @@
 //
 
 import UIKit
-let C1Name = "Economics"
-
-let C2Name = "Organic Chemistry"
-
-let C3Name = "Fiction Workshop"
-
-let C4Name = "Latin"
-
-let C5Name = "Discrete Structures"
-
-let C6Name = "Painting"
 
 var doNotDelete: Bool = true
 
@@ -140,9 +129,9 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.assignmentDueDateLabel.text = dueDateOutputString
         //Class
         let assignmentClassArray:Array = UserDefaults.standard.array(forKey: "AssignmentClassArray")!
-        let array = [C1Name, C2Name, C3Name, C4Name, C5Name, C6Name]
+        let array = UserDefaults.standard.array(forKey: "ClassNamesArray")!
         let int:Int = assignmentClassArray[indexPath.row] as! Int
-        cell.assignmentClassLabel.text = array[int]
+        cell.assignmentClassLabel.text = array[int] as! String
         
         return (cell)
         

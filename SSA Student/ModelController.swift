@@ -553,8 +553,21 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
             //print("JSON data was written to the file successfully!")
         } catch let error as NSError {
             print("Couldn't write to file: \(error.localizedDescription)")
+            
+            
         }
         wholeCycle = [["", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", ""], ["", "", "", "", "", "", "", ""]]
+        
+        UserDefaults.standard.set(["No Classes Set","No Classes Set","No Classes Set","No Classes Set","No Classes Set","No Classes Set","No Classes Set","No Classes Set"], forKey: "ClassNamesArray")
+        let AssignmentClassArray = UserDefaults.standard.array(forKey: "AssignmentClassArray")
+        let AssignmentClassArrayCount = AssignmentClassArray!.count
+        var i:Int = 0
+        var returnArray:[Int] = []
+        while i < AssignmentClassArrayCount {
+            returnArray.append(0)
+            i = i + 1
+        }
+        UserDefaults.standard.set(returnArray, forKey: "AssignmentClassArray")
     }
     
     func readWholeCycle()->[[String]]?{

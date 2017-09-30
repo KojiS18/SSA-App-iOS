@@ -53,7 +53,7 @@ class ChangeAllTopbarViewController: UIViewController {
         
         
         
-        
+        getArrayOfClasses()
         
         
     }
@@ -200,6 +200,58 @@ class ChangeAllTopbarViewController: UIViewController {
         }
         return wholeCycle
         
+    }
+    
+    //Peter's code to read entire cycle. This helps with setting the class names in the pickerview.
+    func readWholeCycle()->[[String]]?{
+        let documentsDirectoryPathString = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let documentsDirectoryPath = NSURL(string: documentsDirectoryPathString)!
+        
+        let jsonFilePath = documentsDirectoryPath.appendingPathComponent("wholeCycle.json")
+        let fileManager = FileManager.default
+        var isDirectory: ObjCBool = false
+        if fileManager.fileExists(atPath: (jsonFilePath?.absoluteString)!, isDirectory: &isDirectory) {
+            do {
+                
+                if let jdata = fileManager.contents(atPath: (jsonFilePath?.absoluteString)!) {
+                    
+                    let json = try JSONSerialization.jsonObject(with: jdata, options: [])
+                    if let object = json as? [[String]] {
+                        
+                        return object
+                    } else {
+                        print("JSON is invalid")
+                    }
+                } else {
+                    
+                    
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        } else {
+            //do stuff if there
+        }
+        print("readwholecycle fail")
+        return nil
+    }
+    
+    //Function that creates an array of all the classes inputted into user schedule
+    func getArrayOfClasses() {
+        var returnArray:Array<String> = []
+        let classArrayGeneratedBySchedule = readWholeCycle()
+        var i:Int = 0
+        
+        while i < 8 {
+            let recievedClass = classArrayGeneratedBySchedule![i][4]
+            if recievedClass != "Free" {
+                returnArray.append(recievedClass)
+            }
+            i = i + 1
+        }
+        
+        UserDefaults.standard.set(returnArray, forKey: "ClassNamesArray")
+        UserDefaults.standard.synchronize()
     }
     
     /*

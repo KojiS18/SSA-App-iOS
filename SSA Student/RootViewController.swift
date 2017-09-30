@@ -328,6 +328,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
             UserDefaults.standard.set([Date(), Date(), Date()], forKey: "AssignmentDueDateArray")
             UserDefaults.standard.set([0, 0, 0], forKey: "AssignmentClassArray")
             UserDefaults.standard.set(["These are your notes! Add assignment notes here.", "These are your notes! Add assignment notes here.", "These are your notes! Add assignment notes here."], forKey: "AssignmentNotesArray")
+            UserDefaults.standard.set(["No classes set","No classes set","No classes set","No classes set","No classes set","No classes set"], forKey: "ClassNamesArray")
             UserDefaults.standard.synchronize()
         }
         
