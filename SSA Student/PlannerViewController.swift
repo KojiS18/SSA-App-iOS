@@ -61,7 +61,7 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
             UserDefaults.standard.set(classArray, forKey: "AssignmentClassArray")
             var notesArray = UserDefaults.standard.array(forKey: "AssignmentNotesArray")!
             notesArray.remove(at: indexPath.row)
-            UserDefaults.standard.set(namesArray, forKey: "AssignmentNotesArray")
+            UserDefaults.standard.set(notesArray, forKey: "AssignmentNotesArray")
             UserDefaults.standard.synchronize()
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
