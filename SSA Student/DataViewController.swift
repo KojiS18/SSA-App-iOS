@@ -620,6 +620,7 @@ class DataViewController: UIViewController {
                 if res=="Free" || res=="Lunch" || res=="free" || res==" free" || res=="free " || res=="Free " || res==" Free"{
                     return (res,getFreeFriends(cycle: day-1, row: period-1))
                 }
+                return (res,nil)
             } else {
                 return (code,nil)
             }

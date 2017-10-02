@@ -28,6 +28,7 @@ class ChangeOneP4TableViewCell: UITableViewCell {
         } else {
             cellDelegate.didChangeName(row: row, text: "")
         }
+        
     }
     
     @IBAction func changeAB(_ sender: UISegmentedControl) {

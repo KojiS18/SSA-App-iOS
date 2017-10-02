@@ -70,7 +70,7 @@ class NewAssignmentViewController: UIViewController, UIPickerViewDataSource, UIP
         return 1
     }
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 6
+        return array.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

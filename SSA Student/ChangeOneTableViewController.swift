@@ -25,6 +25,7 @@ class ChangeOneTableViewController: UITableViewController, ChangeOneProtocol {
             names[row] = "Free"
         }
         
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

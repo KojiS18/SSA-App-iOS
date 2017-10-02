@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../SSA Student/AssignmentTableViewCellViewController.swift">
-   </FileRef>
-   <FileRef
-      location = "group:../SSA Student/NewAssignmentViewController.swift">
-   </FileRef>
-   <FileRef
       location = "self:">
    </FileRef>
 </Workspace>

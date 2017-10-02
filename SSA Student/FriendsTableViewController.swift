@@ -18,7 +18,7 @@ class FriendsTableViewController: UITableViewController {
         let defaults:UserDefaults = UserDefaults.standard
         todayCycle = defaults.integer(forKey: "today")
         print("friends thinks today is day \(todayCycle)")
-        self.title = "Friends"
+        self.title = "Contacts"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

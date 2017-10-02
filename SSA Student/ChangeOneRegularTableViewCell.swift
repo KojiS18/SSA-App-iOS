@@ -25,6 +25,7 @@ class ChangeOneRegularTableViewCell: UITableViewCell {
         } else {
             cellDelegate.didChangeName(row: row, text: "")
         }
+        
     }
     
     

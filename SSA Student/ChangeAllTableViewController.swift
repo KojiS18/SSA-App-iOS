@@ -40,6 +40,17 @@ class ChangeAllTableViewController: UITableViewController, inputProtocol {
         if text.contains("Free") && text.characters.count < 7 {
             names[row] = "Free"
         }
+        var arrayForSave:[Int] = []
+        var i:Int = 0
+        let pulledArray = UserDefaults.standard.array(forKey: "AssignmentNamesArray")
+        while i < pulledArray!.count {
+            arrayForSave.append(0)
+            i = i + 1
+        }
+        
+        UserDefaults.standard.set(arrayForSave, forKey: "AssignmentClassArray")
+        UserDefaults.standard.synchronize()
+        
         
     }
     

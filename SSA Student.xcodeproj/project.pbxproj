@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014DA1EE1F81B98E00D2A42E /* RequestAClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014DA1ED1F81B98E00D2A42E /* RequestAClubViewController.swift */; };
 		018B2A221F7C161500ECDD18 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B2A211F7C161500ECDD18 /* PlannerViewController.swift */; };
 		018B2A271F7C1C3C00ECDD18 /* NewAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B2A251F7C1C3C00ECDD18 /* NewAssignmentViewController.swift */; };
 		018B2A281F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B2A261F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift */; };
+		01A4826D1F81CCEF00679078 /* EgerianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A4826C1F81CCEF00679078 /* EgerianViewController.swift */; };
 		84104BC01F4E601C00CCF911 /* ChangeAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84104BBF1F4E601C00CCF911 /* ChangeAllTableViewController.swift */; };
 		84104BC81F4E60A600CCF911 /* ChangeAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84104BC71F4E60A600CCF911 /* ChangeAllTableViewCell.swift */; };
 		843F23111F6F3DD000376716 /* TeacherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F23101F6F3DD000376716 /* TeacherTableViewCell.swift */; };
@@ -76,9 +78,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		014DA1ED1F81B98E00D2A42E /* RequestAClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAClubViewController.swift; sourceTree = "<group>"; };
 		018B2A211F7C161500ECDD18 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
 		018B2A251F7C1C3C00ECDD18 /* NewAssignmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAssignmentViewController.swift; sourceTree = "<group>"; };
 		018B2A261F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCellViewController.swift; sourceTree = "<group>"; };
+		01A4826C1F81CCEF00679078 /* EgerianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EgerianViewController.swift; sourceTree = "<group>"; };
 		84104BBF1F4E601C00CCF911 /* ChangeAllTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAllTableViewController.swift; sourceTree = "<group>"; };
 		84104BC71F4E60A600CCF911 /* ChangeAllTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAllTableViewCell.swift; sourceTree = "<group>"; };
 		843F23101F6F3DD000376716 /* TeacherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewCell.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				8474E9841F18616300C116C3 /* DataViewController.swift */,
 				8474E9861F18616300C116C3 /* ModelController.swift */,
 				8474E9881F18616300C116C3 /* Main.storyboard */,
+				01A4826C1F81CCEF00679078 /* EgerianViewController.swift */,
+				014DA1ED1F81B98E00D2A42E /* RequestAClubViewController.swift */,
 				018B2A211F7C161500ECDD18 /* PlannerViewController.swift */,
 				018B2A261F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift */,
 				018B2A251F7C1C3C00ECDD18 /* NewAssignmentViewController.swift */,
@@ -288,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A4826D1F81CCEF00679078 /* EgerianViewController.swift in Sources */,
 				84C7C3A01F675F5E005B941F /* ChangeOneTableViewController.swift in Sources */,
 				844253751F45751E00A8D267 /* InputTableViewController.swift in Sources */,
 				84F4FA5C1F76C56300AEB21A /* FriendsTableViewController.swift in Sources */,
@@ -308,6 +315,7 @@
 				84F4FA5F1F76E75A00AEB21A /* AddFriendsViewController.swift in Sources */,
 				84C967571F66F933008DC01C /* ChangeAllTopbarViewController.swift in Sources */,
 				84E6E32C1F6F1632006B09C5 /* DailyViewController.swift in Sources */,
+				014DA1EE1F81B98E00D2A42E /* RequestAClubViewController.swift in Sources */,
 				846D2E0F1F1A6432002D52CE /* PeriodCell.swift in Sources */,
 				8474E9811F18616300C116C3 /* AppDelegate.swift in Sources */,
 				84104BC81F4E60A600CCF911 /* ChangeAllTableViewCell.swift in Sources */,

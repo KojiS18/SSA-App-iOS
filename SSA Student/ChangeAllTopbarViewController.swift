@@ -43,7 +43,18 @@ class ChangeAllTopbarViewController: UIViewController {
             switch isNor {
             case true: newAllPeriod4s.append("Normal")
             case false: newAllPeriod4s.append("Science")
+            
+            var arrayForSave:[Int] = []
+            var i:Int = 0
+            let pulledArray = UserDefaults.standard.array(forKey: "AssignmentNamesArray")
+            while i < pulledArray!.count {
+                arrayForSave.append(0)
+                i = i + 1
+                }
                 
+            UserDefaults.standard.set(arrayForSave, forKey: "AssignmentClassArray")
+            UserDefaults.standard.synchronize()
+            
             }
         }
         
