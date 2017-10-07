@@ -170,7 +170,7 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
         UserDefaults.standard.set(classArray, forKey: "AssignmentClassArray")
         //Notes
         var notesArray:Array = UserDefaults.standard.array(forKey: "AssignmentNotesArray")!
-        let notesItem = namesArray[sourceIndexPath.row]
+        let notesItem = notesArray[sourceIndexPath.row]
         notesArray.remove(at: sourceIndexPath.row)
         notesArray.insert(notesItem, at: destinationIndexPath.row)
         UserDefaults.standard.set(notesArray, forKey: "AssignmentNotesArray")
