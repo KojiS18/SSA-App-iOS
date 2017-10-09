@@ -21,26 +21,22 @@ class ChangeOneTopbarViewController: UIViewController {
     @IBAction func doneChanging(_ sender: UIButton) {
         child?.view.endEditing(true)
         let ns = child!.names
-        if child!.isAB {
+        
             whole[dayN-1][0] = ns[0]
             whole[dayN-1][1] = ns[1]
             whole[dayN-1][2] = ns[2]
             whole[dayN-1][3] = ns[3]
-            whole[dayN-1][4] = ns[3]
-            whole[dayN-1][5] = "Lunch"
-            whole[dayN-1][6] = ns[4]
-            whole[dayN-1][7] = ns[5]
+            whole[dayN-1][4] = ns[4]
+            whole[dayN-1][5] = ns[5]
+            whole[dayN-1][6] = ns[6]
+            whole[dayN-1][7] = ns[7]
+        if whole[dayN-1][4] == whole[dayN-1][3] {
+            
             whole[8][dayN-1] = "AB"
-        } else {
-            whole[dayN-1][0] = ns[0]
-            whole[dayN-1][1] = ns[1]
-            whole[dayN-1][2] = ns[2]
-            whole[dayN-1][3] = "Lunch"
-            whole[dayN-1][4] = ns[3]
-            whole[dayN-1][5] = ns[3]
-            whole[dayN-1][6] = ns[4]
-            whole[dayN-1][7] = ns[5]
+        } else if whole[dayN-1][4] == whole[dayN-1][5] {
             whole[8][dayN-1] = "BC"
+        } else {
+            whole[8][dayN-1] = "NA"
         }
         writeWholeCycle(with: whole)
         
@@ -66,15 +62,13 @@ class ChangeOneTopbarViewController: UIViewController {
         self.child = (stb.instantiateViewController(withIdentifier: "changeone") as! ChangeOneTableViewController)
         child!.whole = self.whole
         child!.dayN = self.dayN
-        if whole[dayN-1][3] == "Lunch" {
-            child!.isAB = false
-        } else {
-            child!.isAB = true
-        }
+        
         child!.names.append(whole[dayN-1][0])
         child!.names.append(whole[dayN-1][1])
         child!.names.append(whole[dayN-1][2])
+        child!.names.append(whole[dayN-1][3])
         child!.names.append(whole[dayN-1][4])
+        child!.names.append(whole[dayN-1][5])
         child!.names.append(whole[dayN-1][6])
         child!.names.append(whole[dayN-1][7])
         self.addChildViewController(self.child!)

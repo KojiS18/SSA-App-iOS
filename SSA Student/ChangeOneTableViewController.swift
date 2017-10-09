@@ -12,18 +12,18 @@ class ChangeOneTableViewController: UITableViewController, ChangeOneProtocol {
     var whole: [[String]] = []
     var dayN: Int = 0
     var names: [String] = []
-    var isAB: Bool = false
-    func didSelectAB(ab: Bool) {
-        isAB = ab
-    }
+    
+    let diction: [Int:String] = [0:"1",1:"2",2:"3",3:"4A",4:"4B",5:"4C",6:"5",7:"6"]
+   
     func didChangeName(row:Int, text: String) {
         names[row] = text
-        if text.contains("free") && text.characters.count < 7 {
+        if text.contains("free") && text.characters.count < 5 {
             names[row] = "Free"
         }
-        if text.contains("Free") && text.characters.count < 7 {
-            names[row] = "Free"
+        if text.contains("lunch") && text.characters.count < 6 {
+            names[row] = "Lunch"
         }
+
         
         
     }
@@ -54,37 +54,21 @@ class ChangeOneTableViewController: UITableViewController, ChangeOneProtocol {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return 8
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row != 3 {
+        
             let cell = tableView.dequeueReusableCell(withIdentifier: "regular", for: indexPath) as! ChangeOneRegularTableViewCell
             //cell.isUserInteractionEnabled = true
             //cell.bringSubview(toFront: cell.contentView)
             cell.cellDelegate = self
-            cell.dayPeriod.text = "Period \(indexPath.row+1) Day \(dayN)"
+            cell.dayPeriod.text = "Period \(diction[indexPath.row]!) Day \(dayN)"
             cell.nameOfPeriod.text = names[indexPath.row]
             cell.row = indexPath.row
             return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "p4", for: indexPath) as! ChangeOneP4TableViewCell
-            //cell.isUserInteractionEnabled = true
-            cell.bringSubview(toFront: cell.contentView)
-            cell.cellDelegate = self
-            cell.dayPeriod.text = "Period \(indexPath.row+1) Day \(dayN)"
-            cell.nameOfPeriod.text = names[3]
-            cell.row = indexPath.row
-            if isAB {
-                cell.lunch.selectedSegmentIndex = 0
-            } else {
-                cell.lunch.selectedSegmentIndex = 1
-
-            }
-            
-            return cell
-        }
+        
         
 
         // Configure the cell...
@@ -93,13 +77,10 @@ class ChangeOneTableViewController: UITableViewController, ChangeOneProtocol {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row != 3 {
+        
             let h: CGFloat = 80
             return h
-        } else {
-            let h: CGFloat = 119
-            return h
-        }
+        
     }
     
 

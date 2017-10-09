@@ -497,7 +497,7 @@
                     <navigationItem key="navigationItem" id="B0i-Jy-lRS">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="BoL-k2-9Cx">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MLd-KI-0Ld">
-                                <rect key="frame" x="223" y="5.5" width="81" height="33"/>
+                                <rect key="frame" x="223" y="6" width="81" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Add/Share">
@@ -784,7 +784,7 @@
         <!--More-->
         <scene sceneID="Ig7-qU-5tj">
             <objects>
-                <tableViewController id="tqo-ko-737" sceneMemberID="viewController">
+                <tableViewController id="tqo-ko-737" customClass="MoreTableViewController" customModule="SSA_Student" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="fsV-aX-C6l">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -890,10 +890,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Open Via Safari" id="F9v-BD-pja">
+                            <tableViewSection id="F9v-BD-pja">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="50" id="Us3-nC-6Dk" customClass="TeacherTableViewCell" customModule="SSA_Student" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="311.5" width="320" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="50" id="Us3-nC-6Dk">
+                                        <rect key="frame" x="0.0" y="291.5" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Us3-nC-6Dk" id="Yot-u2-Dx2">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49.5"/>
@@ -918,7 +918,7 @@
                             <tableViewSection headerTitle="" id="gXU-N3-Ycz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="50" id="CLO-at-jD4">
-                                        <rect key="frame" x="0.0" y="397.5" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="377.5" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CLO-at-jD4" id="svA-oP-i3V">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49.5"/>
@@ -942,7 +942,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="50" id="uSd-yV-hqZ">
-                                        <rect key="frame" x="0.0" y="447.5" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="427.5" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uSd-yV-hqZ" id="1Tp-pC-Qwj">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49.5"/>
@@ -1234,7 +1234,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="zQt-Kk-2v6">
-                            <rect key="frame" x="0.0" y="228" width="320" height="1"/>
+                            <rect key="frame" x="0.0" y="109" width="320" height="1"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
@@ -1268,49 +1268,6 @@
                                 <connections>
                                     <outlet property="dayPeriod" destination="wcB-cw-aE2" id="QhX-g9-AyQ"/>
                                     <outlet property="nameOfPeriod" destination="QVu-vM-81j" id="uWF-S1-kKP"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="p4" rowHeight="119" id="xiy-17-hl3" customClass="ChangeOneP4TableViewCell" customModule="SSA_Student" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="109" width="320" height="119"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xiy-17-hl3" id="ZlV-Q3-dXV">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="118.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bPo-H1-Hpw">
-                                            <rect key="frame" x="145" y="70" width="108" height="29"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <segments>
-                                                <segment title="AB"/>
-                                                <segment title="BC"/>
-                                            </segments>
-                                            <connections>
-                                                <action selector="changeAB:" destination="xiy-17-hl3" eventType="valueChanged" id="b8J-4N-cnU"/>
-                                            </connections>
-                                        </segmentedControl>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Day 0 Period 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDQ-pK-ux8">
-                                            <rect key="frame" x="8" y="26" width="129" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jhg-wB-ynj">
-                                            <rect key="frame" x="145" y="22" width="140" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
-                                            <connections>
-                                                <action selector="endEdit:" destination="xiy-17-hl3" eventType="editingDidEnd" id="4o5-zy-CaA"/>
-                                            </connections>
-                                        </textField>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="dayPeriod" destination="fDQ-pK-ux8" id="Fvl-pK-eO6"/>
-                                    <outlet property="lunch" destination="bPo-H1-Hpw" id="UMQ-Ud-dLz"/>
-                                    <outlet property="nameOfPeriod" destination="jhg-wB-ynj" id="6F1-e8-jDI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

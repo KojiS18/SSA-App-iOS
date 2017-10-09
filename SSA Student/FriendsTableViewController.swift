@@ -154,7 +154,7 @@ class FriendsTableViewController: UITableViewController {
                     default: break
                     }
                     let range = (s as NSString).range(of: toColor)
-                    r.addAttribute(NSForegroundColorAttributeName, value: UIColor.green , range: range)
+                    r.addAttribute(NSForegroundColorAttributeName, value: UIColor.blue , range: range)
                 } else {
                     switch n {
                     case 0: toColor = "1 "

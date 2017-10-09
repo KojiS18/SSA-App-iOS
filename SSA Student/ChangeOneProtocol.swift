@@ -11,6 +11,6 @@ import Foundation
 
 protocol ChangeOneProtocol {
     
-    func didSelectAB(ab: Bool)
+    
     func didChangeName(row:Int, text: String)
 }
