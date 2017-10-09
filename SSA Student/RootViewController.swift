@@ -313,6 +313,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
     }
     override func viewWillDisappear(_ animated: Bool) {
         atPage = currentPage
+        UserDefaults.standard.set(atPage, forKey: "atPage")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
