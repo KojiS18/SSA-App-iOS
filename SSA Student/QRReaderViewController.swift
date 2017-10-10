@@ -40,7 +40,7 @@ class QRReaderViewController: UIViewController, UITextFieldDelegate, AVCaptureMe
                     stringCounter = stringCounter + 1
                 }
             }
-            if counter > 1 && stringCounter==1 {
+            if counter > 0 && stringCounter==1 {
                 written = true
                 print(freeArray)
                 let defaults:UserDefaults = UserDefaults.standard

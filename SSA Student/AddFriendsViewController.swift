@@ -8,8 +8,150 @@
 
 import UIKit
 import CoreImage
+import Photos
 
-class AddFriendsViewController: UIViewController, UITextFieldDelegate {
+
+class AddFriendsViewController: UIViewController, UIImagePickerControllerDelegate, UITextFieldDelegate, UINavigationControllerDelegate {
+    
+    
+    
+    @IBAction func pickingPhotos(_ sender: UIButton) {
+        
+        let photoAuthorizationStatus = PHPhotoLibrary.authorizationStatus()
+        switch photoAuthorizationStatus {
+            
+        case .authorized:
+            // Access is granted by user.
+            print("authroized")
+            break
+            
+        case .notDetermined:
+            print("ok)")
+            PHPhotoLibrary.requestAuthorization({status in
+                if status == .authorized{
+                    print("authorized")
+                } else {
+                    print("denied")
+                }
+            })
+            break
+            
+        case .restricted:
+            // User do not have access to photo album.
+            print("restricted")
+            break
+            
+        case .denied:
+            // User has denied the permission.
+            let alertController = UIAlertController(title: "Photos can't be accessed", message: "Please go to Settings-Pivacy-Photos, select SSA Student app, and allow the app to access to your photos (to extract QR code)", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(okButton)
+            self.present(alertController,animated: true, completion: nil)
+            print("denied")
+            break
+        }
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = .savedPhotosAlbum
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.savedPhotosAlbum) {
+            print("we do have access to saved photos")
+            present(imagePicker, animated: true, completion: nil)
+            
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        print("found picture")
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            let detector:CIDetector=CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])!
+            let ciImage:CIImage=CIImage(image: pickedImage)!
+            var qrCodeLink=""
+            
+            let features=detector.features(in: ciImage)
+            for feature in features as! [CIQRCodeFeature] {
+                qrCodeLink += feature.messageString!
+                //print(qrCodeLink)
+            }
+            print("over")
+            print(qrCodeLink)
+            
+            
+            let text = qrCodeLink
+            self.dismiss(animated: true, completion: nil)
+            if text != "" {
+                var freeArray = text.split(separator: ",")
+                var counter = 0
+                var stringCounter = 0
+                for each in freeArray {
+                    if Int(each) != nil {
+                        counter = counter + 1
+                        print("has \(counter) valid frees")
+                    } else {
+                        stringCounter = stringCounter + 1
+                    }
+                }
+                print(freeArray)
+                if counter > 0 && stringCounter==1 {
+                    let defaults:UserDefaults = UserDefaults.standard
+                    if var namesArray = defaults.array(forKey: "namesArray") {
+                        namesArray.append(String(freeArray[0]))
+                        defaults.set(namesArray, forKey: "namesArray")
+                        print("exist")
+                        print(namesArray)
+                    } else {
+                        let newNamesArray = [String(freeArray[0])]
+                        defaults.set(newNamesArray, forKey: "namesArray")
+                        print(newNamesArray)
+                    }
+                    var newUserFrees: [Bool] = Array(repeating: false, count: 64)
+                    //freeArray.remove(at: 0)
+                    for num in freeArray {
+                        if let n = Int(num) {
+                            newUserFrees[n] = true
+                        }
+                    }
+                    print(newUserFrees)
+                    if let all = defaults.array(forKey:
+                        "all") {
+                        var allFriends = all as! [[Bool]]
+                        allFriends.append(newUserFrees)
+                        defaults.set(allFriends, forKey: "all")
+                        print(allFriends)
+                    } else {
+                        defaults.set([newUserFrees], forKey: "all")
+                        print([newUserFrees])
+                        print("creating a new one")
+                    }
+                    
+                    
+                    let alertController = UIAlertController(title: "Done", message: "You have successfully added \(freeArray[0]), who has \(counter) frees in a cycle", preferredStyle: .alert)
+                    let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(okButton)
+                    self.present(alertController,animated: true, completion: nil)
+                }
+                else {
+                    let alertController = UIAlertController(title: "Wrong format", message: "Code format is not valid. Input is \(text)", preferredStyle: .alert)
+                    let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(okButton)
+                    self.present(alertController,animated: true, completion: nil)
+                }
+                
+                
+                
+                
+            } else {
+                print("we didn't find anything")
+                let alertController = UIAlertController(title: "No QR code detected", message: "Please select a photo that has a clear QR code", preferredStyle: .alert)
+                let okButton = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(okButton)
+                self.present(alertController,animated: true, completion: nil)
+            }
+        }
+        
+    }
     
     var myName: String = ""
     @IBOutlet weak var ownQRcode: UIImageView!
@@ -65,7 +207,7 @@ class AddFriendsViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
                 print(freeArray)
-                if counter > 1 && stringCounter==1 {
+                if counter > 0 && stringCounter==1 {
                     let defaults:UserDefaults = UserDefaults.standard
                     if var namesArray = defaults.array(forKey: "namesArray") {
                         namesArray.append(String(freeArray[0]))
@@ -133,7 +275,7 @@ class AddFriendsViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
                 print(freeArray)
-                if counter > 1 && stringCounter==1 {
+                if counter > 0 && stringCounter==1 {
                 let defaults:UserDefaults = UserDefaults.standard
                 if var namesArray = defaults.array(forKey: "namesArray") {
                     namesArray.append(String(freeArray[0]))
@@ -279,6 +421,9 @@ class AddFriendsViewController: UIViewController, UITextFieldDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         blankImage.backgroundColor = UIColor.clear
         yourName.delegate = self
         textCodeFromFriend.delegate = self
