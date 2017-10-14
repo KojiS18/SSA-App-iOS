@@ -325,15 +325,45 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
             // This code will be run if this is the first time the app is running
             UserDefaults.standard.set(true, forKey: "launchedBefore")
             //Creates arrays stored in UserDefaults to be used by Planner function of the app
-            UserDefaults.standard.set(["This is your digital planner!","Delete items by swiping them to the left", "Press add to add assignments"], forKey: "AssignmentNamesArray")
-            UserDefaults.standard.set([Date(), Date(), Date()], forKey: "AssignmentDueDateArray")
+            UserDefaults.standard.set(["This is your digital planner!","Complete items by swiping them to the left", "Press add to add assignments"], forKey: "AssignmentNamesArray")
+            UserDefaults.standard.set([getTodayIndex(), getTodayIndex(), getTodayIndex()], forKey: "AssignmentDueDateArray")
             UserDefaults.standard.set([0, 0, 0], forKey: "AssignmentClassArray")
+            UserDefaults.standard.set(true, forKey: "plannerDatesHaveBeenChangedToIndexPaths")
             UserDefaults.standard.set(["These are your notes! Add assignment notes here.", "These are your notes! Add assignment notes here.", "These are your notes! Add assignment notes here."], forKey: "AssignmentNotesArray")
             UserDefaults.standard.set(["No classes set","No classes set","No classes set","No classes set","No classes set","No classes set"], forKey: "ClassNamesArray")
-            UserDefaults.standard.synchronize()
+            UserDefaults.standard.set([0,0,0], forKey: "DuePeriodArray")
+            UserDefaults.standard.set(true, forKey: "periodArrayHasBeenCreated")
         }
         
+        UserDefaults.standard.synchronize()
         
+        if (UserDefaults.standard.bool(forKey: "plannerDatesHaveBeenChangedToIndexPaths")) {
+            //This code will run if Planner Dates have already been changed to index paths
+        } else {
+            var inputArray = UserDefaults.standard.array(forKey: "AssignmentDueDateArray")!
+            let inputArrayLength = inputArray.count
+            var i:Int = 0
+            while i < inputArrayLength {
+                inputArray[i] = getIndexFromDate(inputDate: inputArray[i] as! Date)
+                i = i + 1
+            }
+            UserDefaults.standard.set(true, forKey: "plannerDatesHaveBeenChangedToIndexPaths")
+        }
+        
+        if (UserDefaults.standard.bool(forKey: "periodArrayHasBeenCreated")) {
+            //This code will run if the period array has been created
+        } else {
+            let inputArray = UserDefaults.standard.array(forKey: "AssignmentNamesArray")!
+            let currentNumberOfAssignments = inputArray.count
+            var array:[Int] = []
+            let i = 0
+            while i < currentNumberOfAssignments {
+                array.append(1)
+            }
+            UserDefaults.standard.set(array, forKey: "DuePeriodArray")
+        }
+        
+          UserDefaults.standard.synchronize()
         
         //self.view.UIColor
         // Do any additional setup after loading the view, typically from a nib.
@@ -455,6 +485,41 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         self.pageViewController!.setViewControllers(viewControllers, direction: .forward, animated: true, completion: {done in })
         
         return .mid
+    }
+    
+    //Adapted from Peter's method "getTodayIndex" in RootViewController
+    func getIndexFromDate(inputDate:Date)->Int{
+        let date = inputDate
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day], from: date)
+        var year = components.year!
+        var month = components.month!
+        var day = components.day!
+        let schoolDays = arrayOfSchoolYear
+        var index = schoolDays.index(where:{$0[3]==year&&$0[1]==month&&$0[2]==day})
+        let maxLookups = 40
+        var counter = 0
+        while index==nil && counter <= maxLookups{
+            counter = counter + 1
+            if day<31 {
+                day = day + 1
+            } else if month<12 {
+                day = 1
+                month = month + 1
+            } else {
+                day = 1
+                month = 1
+                year = year + 1
+            }
+            index = schoolDays.index(where:{$0[3]==year&&$0[1]==month&&$0[2]==day})
+        }
+        if index == nil {
+            index = 0
+        }
+        let cycleDayToSave = schoolDays[index!][5]
+        let defaults:UserDefaults = UserDefaults.standard
+        defaults.set(cycleDayToSave, forKey: "today")
+        return index!
     }
     
     

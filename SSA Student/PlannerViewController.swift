@@ -21,6 +21,7 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         self.tableView.reloadData()
     }
     
@@ -30,7 +31,7 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
         namesArray.append("")
         UserDefaults.standard.set(namesArray, forKey: "AssignmentNamesArray")
         var dueDateArray = UserDefaults.standard.array(forKey: "AssignmentDueDateArray")!
-        dueDateArray.append(Date())
+        dueDateArray.append(getIndexFromDate(inputDate: Date()))
         UserDefaults.standard.set(dueDateArray, forKey: "AssignmentDueDateArray")
         print(UserDefaults.standard.array(forKey: "AssignmentDueDateArray")!)
         var classArray = UserDefaults.standard.array(forKey: "AssignmentClassArray")!
@@ -39,6 +40,9 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
         var notesArray = UserDefaults.standard.array(forKey: "AssignmentNotesArray")!
         notesArray.append("Notes")
         UserDefaults.standard.set(notesArray, forKey: "AssignmentNotesArray")
+        var duePeriodArray = UserDefaults.standard.array(forKey: "DuePeriodArray")!
+        duePeriodArray.append(0)
+        UserDefaults.standard.set(duePeriodArray, forKey: "DuePeriodArray")
         UserDefaults.standard.synchronize()
         doNotDelete = false
     }
@@ -47,9 +51,11 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return UserDefaults.standard.array(forKey: "AssignmentNamesArray")!.count
     }
-    //Adds ability to delete cells
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
+    
+    //Adds ability to "complete" cells
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let complete = UITableViewRowAction(style: .destructive, title: "Complete") { (action, indexPath) in
+            // delete item at indexPath
             var namesArray = UserDefaults.standard.array(forKey: "AssignmentNamesArray")!
             namesArray.remove(at: indexPath.row)
             UserDefaults.standard.set(namesArray, forKey: "AssignmentNamesArray")
@@ -62,9 +68,17 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
             var notesArray = UserDefaults.standard.array(forKey: "AssignmentNotesArray")!
             notesArray.remove(at: indexPath.row)
             UserDefaults.standard.set(notesArray, forKey: "AssignmentNotesArray")
+            var duePeriodArray = UserDefaults.standard.array(forKey: "DuePeriodArray")!
+            duePeriodArray.remove(at: indexPath.row)
+            UserDefaults.standard.set(duePeriodArray, forKey: "DuePeriodArray")
             UserDefaults.standard.synchronize()
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
+        
+        
+        complete.backgroundColor = UIColor.green
+        
+        return [complete]
     }
     
     //Creates Cells
@@ -92,7 +106,7 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
         let dueDateArray:Array = UserDefaults.standard.array(forKey: "AssignmentDueDateArray")!
         let dateformatter = DateFormatter()
         dateformatter.dateStyle = .medium
-        let inputDate:Date = dueDateArray[indexPath.row] as! Date
+        let inputDate:Date = getDateFromIndex(inputPath: dueDateArray[indexPath.row] as! Int)
         let inputDateForDisplay: String = dateformatter.string(from: inputDate)
         let inputWeekdayAsStringVar = inputDateWeekdayAsString(Date: inputDate)
         let inputYear = Calendar.current.component(.year, from: inputDate)
@@ -174,6 +188,11 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
         notesArray.remove(at: sourceIndexPath.row)
         notesArray.insert(notesItem, at: destinationIndexPath.row)
         UserDefaults.standard.set(notesArray, forKey: "AssignmentNotesArray")
+        var duePeriodArray:Array = UserDefaults.standard.array(forKey: "DuePeriodArray")!
+        let duePeriodItem = duePeriodArray[sourceIndexPath.row]
+        duePeriodArray.remove(at: sourceIndexPath.row)
+        duePeriodArray.insert(duePeriodItem, at: destinationIndexPath.row)
+        UserDefaults.standard.set(duePeriodArray, forKey: "DuePeriodArray")
         //Synchronizes UserDefaults
         UserDefaults.standard.synchronize()
     }
@@ -207,6 +226,52 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func reloadTableData() {
         tableView.reloadData()
+    }
+    
+    func getDateFromIndex(inputPath:Int) -> Date {
+        let df = DateFormatter()
+        df.dateFormat = "YYYY-MM-dd"
+        let inputtedDateArray = arrayOfSchoolYear[inputPath]
+        let inputtedDay = inputtedDateArray[2]
+        let inputtedMonth = inputtedDateArray[1]
+        let inputtedYear = inputtedDateArray[3]
+        let inputtedDate:Date = df.date(from: "\(inputtedYear)-\(inputtedMonth)-\(inputtedDay)")!
+        return inputtedDate
+    }
+    
+    //Adapted from Peter's method "getTodayIndex" in RootViewController
+    func getIndexFromDate(inputDate:Date)->Int{
+        let date = inputDate
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month, .day], from: date)
+        var year = components.year!
+        var month = components.month!
+        var day = components.day!
+        let schoolDays = arrayOfSchoolYear
+        var index = schoolDays.index(where:{$0[3]==year&&$0[1]==month&&$0[2]==day})
+        let maxLookups = 40
+        var counter = 0
+        while index==nil && counter <= maxLookups{
+            counter = counter + 1
+            if day<31 {
+                day = day + 1
+            } else if month<12 {
+                day = 1
+                month = month + 1
+            } else {
+                day = 1
+                month = 1
+                year = year + 1
+            }
+            index = schoolDays.index(where:{$0[3]==year&&$0[1]==month&&$0[2]==day})
+        }
+        if index == nil {
+            index = 0
+        }
+        let cycleDayToSave = schoolDays[index!][5]
+        let defaults:UserDefaults = UserDefaults.standard
+        defaults.set(cycleDayToSave, forKey: "today")
+        return index!
     }
 }
 

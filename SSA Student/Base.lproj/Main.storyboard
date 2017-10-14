@@ -692,26 +692,23 @@
                                     <segue destination="JnH-b7-SfD" kind="show" id="g8D-Lb-sDu"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Notes" translatesAutoresizingMaskIntoConstraints="NO" id="aqU-PR-ZCL">
-                                <rect key="frame" x="16" y="137" width="288" height="124"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Notes" translatesAutoresizingMaskIntoConstraints="NO" id="aqU-PR-ZCL">
+                                <rect key="frame" x="16" y="137" width="288" height="175"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mMI-aJ-yoX">
-                                <rect key="frame" x="0.0" y="269" width="320" height="162"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPj-gg-gIb">
+                                <rect key="frame" x="8" y="310" width="304" height="121"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="162" id="N0T-a3-qvS"/>
+                                    <constraint firstAttribute="height" constant="121" id="2rN-tT-ZGC"/>
                                 </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="528229768.34392101">
-                                    <!--2017-09-27 18:29:28 +0000-->
-                                </date>
                                 <connections>
-                                    <action selector="dueDateValueChanged:" destination="gop-mc-zTF" eventType="valueChanged" id="7mQ-RG-yTu"/>
+                                    <outlet property="dataSource" destination="gop-mc-zTF" id="vPV-Gh-3dg"/>
+                                    <outlet property="delegate" destination="gop-mc-zTF" id="bQs-Nt-qSw"/>
                                 </connections>
-                            </datePicker>
+                            </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OD6-Ng-fpd">
                                 <rect key="frame" x="0.0" y="439" width="320" height="121"/>
                                 <constraints>
@@ -736,18 +733,16 @@
                             <constraint firstItem="FBW-Wm-Ldv" firstAttribute="centerX" secondItem="Thf-tu-gf9" secondAttribute="centerX" id="9QI-2C-XZN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vbJ-oh-Hk6" secondAttribute="trailing" constant="3" id="9ua-B1-To6"/>
                             <constraint firstItem="d8R-MM-Pio" firstAttribute="leading" secondItem="Thf-tu-gf9" secondAttribute="leadingMargin" constant="3" id="AuG-z5-Kck"/>
-                            <constraint firstItem="mMI-aJ-yoX" firstAttribute="top" secondItem="aqU-PR-ZCL" secondAttribute="bottom" constant="8" id="CZv-RG-DZ2"/>
+                            <constraint firstAttribute="trailing" secondItem="fPj-gg-gIb" secondAttribute="trailing" constant="8" id="FIt-he-lzn"/>
                             <constraint firstItem="vbJ-oh-Hk6" firstAttribute="centerY" secondItem="d8R-MM-Pio" secondAttribute="centerY" id="JkB-0h-NBH"/>
+                            <constraint firstItem="OD6-Ng-fpd" firstAttribute="top" secondItem="fPj-gg-gIb" secondAttribute="bottom" constant="8" id="K1M-iE-WV9"/>
                             <constraint firstItem="aqU-PR-ZCL" firstAttribute="leading" secondItem="Thf-tu-gf9" secondAttribute="leadingMargin" id="La3-Gv-AkT"/>
                             <constraint firstItem="Vyj-Wl-kX1" firstAttribute="top" secondItem="vbJ-oh-Hk6" secondAttribute="bottom" constant="38.5" id="Mji-Be-4cQ"/>
-                            <constraint firstItem="aqU-PR-ZCL" firstAttribute="leading" secondItem="Thf-tu-gf9" secondAttribute="leadingMargin" id="NJf-p1-g3x"/>
                             <constraint firstAttribute="trailing" secondItem="Y9a-Ao-0E1" secondAttribute="trailing" id="Oyu-Da-9vn"/>
                             <constraint firstItem="aqU-PR-ZCL" firstAttribute="trailing" secondItem="Thf-tu-gf9" secondAttribute="trailingMargin" id="QSC-Ug-HQB"/>
-                            <constraint firstItem="OD6-Ng-fpd" firstAttribute="top" secondItem="mMI-aJ-yoX" secondAttribute="bottom" constant="8" id="RYK-jv-xbI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aqU-PR-ZCL" secondAttribute="trailing" id="Rf6-cf-aJX"/>
-                            <constraint firstAttribute="trailing" secondItem="mMI-aJ-yoX" secondAttribute="trailing" id="WFs-fx-YqD"/>
-                            <constraint firstItem="aqU-PR-ZCL" firstAttribute="top" secondItem="Vyj-Wl-kX1" secondAttribute="bottom" constant="8" id="XH4-AN-LE9"/>
+                            <constraint firstItem="fPj-gg-gIb" firstAttribute="leading" secondItem="Thf-tu-gf9" secondAttribute="leading" constant="8" id="WwB-Xa-cy2"/>
                             <constraint firstItem="Vyj-Wl-kX1" firstAttribute="leading" secondItem="Thf-tu-gf9" secondAttribute="leadingMargin" id="Y5t-iA-RvJ"/>
+                            <constraint firstItem="fPj-gg-gIb" firstAttribute="top" secondItem="aqU-PR-ZCL" secondAttribute="bottom" constant="-129" id="eYB-OO-7LJ"/>
                             <constraint firstItem="aqU-PR-ZCL" firstAttribute="top" secondItem="Vyj-Wl-kX1" secondAttribute="bottom" constant="8" id="gIB-Hq-UwN"/>
                             <constraint firstItem="Y9a-Ao-0E1" firstAttribute="leading" secondItem="Thf-tu-gf9" secondAttribute="leading" id="hh5-sI-oaj"/>
                             <constraint firstItem="FBW-Wm-Ldv" firstAttribute="centerY" secondItem="d8R-MM-Pio" secondAttribute="centerY" id="ktr-YP-iAh"/>
@@ -756,15 +751,13 @@
                             <constraint firstItem="OD6-Ng-fpd" firstAttribute="leading" secondItem="Thf-tu-gf9" secondAttribute="leading" id="oK7-Vs-GaJ"/>
                             <constraint firstItem="FBW-Wm-Ldv" firstAttribute="top" secondItem="jBN-Ux-Q8E" secondAttribute="bottom" constant="8" id="pHa-pK-mJ5"/>
                             <constraint firstItem="q2t-fo-I1G" firstAttribute="top" secondItem="Y9a-Ao-0E1" secondAttribute="bottom" id="rlM-fF-jNb"/>
-                            <constraint firstItem="mMI-aJ-yoX" firstAttribute="leading" secondItem="Thf-tu-gf9" secondAttribute="leading" id="t7M-Qv-fJF"/>
-                            <constraint firstItem="mMI-aJ-yoX" firstAttribute="top" secondItem="aqU-PR-ZCL" secondAttribute="bottom" constant="8" id="uIy-gJ-K1e"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="assignmentTextField" destination="Vyj-Wl-kX1" id="BNm-y2-Bvb"/>
                         <outlet property="classPicker" destination="OD6-Ng-fpd" id="HVQ-hF-IXF"/>
-                        <outlet property="dueDatePicker" destination="mMI-aJ-yoX" id="72P-Qk-WMf"/>
                         <outlet property="notesTextView" destination="aqU-PR-ZCL" id="SLY-j1-Y4e"/>
+                        <outlet property="pickerView" destination="fPj-gg-gIb" id="rKk-Hn-6oU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxI-3W-eDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
