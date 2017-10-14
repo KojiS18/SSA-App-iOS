@@ -109,9 +109,9 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
             dueDateOutputString = "\(inputWeekdayAsStringVar), \(inputDateForDisplay)"
         } else if (inputDay - todayDay < 7) && (inputDay - todayDay > 0) {
             if inputDay - todayDay == 1 {
-                dueDateOutputString = "Tommorow"
+                dueDateOutputString = "Tomorrow"
             } else {
-                dueDateOutputString = "Next \(inputWeekdayAsStringVar)"
+                dueDateOutputString = "This \(inputWeekdayAsStringVar)"
             }
         } else if (inputDay - todayDay > -7) && (inputDay - todayDay < 0) {
             if inputDay - todayDay == -1 {

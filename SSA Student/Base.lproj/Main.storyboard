@@ -509,7 +509,7 @@
                     <navigationItem key="navigationItem" id="B0i-Jy-lRS">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="BoL-k2-9Cx">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MLd-KI-0Ld">
-                                <rect key="frame" x="223" y="6" width="81" height="33"/>
+                                <rect key="frame" x="223" y="5.5" width="81" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Add/Share">
