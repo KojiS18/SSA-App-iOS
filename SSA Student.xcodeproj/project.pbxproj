@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		014DA1EE1F81B98E00D2A42E /* RequestAClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014DA1ED1F81B98E00D2A42E /* RequestAClubViewController.swift */; };
-		017B58B01F91BB360075DE9E /* arrayOfSchoolYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017B58AF1F91BB360075DE9E /* arrayOfSchoolYear.swift */; };
 		018B2A221F7C161500ECDD18 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B2A211F7C161500ECDD18 /* PlannerViewController.swift */; };
 		018B2A271F7C1C3C00ECDD18 /* NewAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B2A251F7C1C3C00ECDD18 /* NewAssignmentViewController.swift */; };
 		018B2A281F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B2A261F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift */; };
 		01A4826D1F81CCEF00679078 /* EgerianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A4826C1F81CCEF00679078 /* EgerianViewController.swift */; };
+		01DD73B31F9CC960006D1256 /* DramaTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DD73B21F9CC960006D1256 /* DramaTicketsViewController.swift */; };
+		01DD73B71F9CCE22006D1256 /* arrayOfSchoolYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DD73B61F9CCE21006D1256 /* arrayOfSchoolYear.swift */; };
 		84104BC01F4E601C00CCF911 /* ChangeAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84104BBF1F4E601C00CCF911 /* ChangeAllTableViewController.swift */; };
 		84104BC81F4E60A600CCF911 /* ChangeAllTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84104BC71F4E60A600CCF911 /* ChangeAllTableViewCell.swift */; };
 		844253751F45751E00A8D267 /* InputTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844253741F45751E00A8D267 /* InputTableViewController.swift */; };
@@ -79,11 +80,12 @@
 
 /* Begin PBXFileReference section */
 		014DA1ED1F81B98E00D2A42E /* RequestAClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAClubViewController.swift; sourceTree = "<group>"; };
-		017B58AF1F91BB360075DE9E /* arrayOfSchoolYear.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = arrayOfSchoolYear.swift; path = ../../../CustomDatePicker/CustomDatePicker/arrayOfSchoolYear.swift; sourceTree = "<group>"; };
 		018B2A211F7C161500ECDD18 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
 		018B2A251F7C1C3C00ECDD18 /* NewAssignmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAssignmentViewController.swift; sourceTree = "<group>"; };
 		018B2A261F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCellViewController.swift; sourceTree = "<group>"; };
 		01A4826C1F81CCEF00679078 /* EgerianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EgerianViewController.swift; sourceTree = "<group>"; };
+		01DD73B21F9CC960006D1256 /* DramaTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaTicketsViewController.swift; sourceTree = "<group>"; };
+		01DD73B61F9CCE21006D1256 /* arrayOfSchoolYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arrayOfSchoolYear.swift; sourceTree = "<group>"; };
 		84104BBF1F4E601C00CCF911 /* ChangeAllTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAllTableViewController.swift; sourceTree = "<group>"; };
 		84104BC71F4E60A600CCF911 /* ChangeAllTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAllTableViewCell.swift; sourceTree = "<group>"; };
 		844253741F45751E00A8D267 /* InputTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01DD73B41F9CCDCE006D1256 /* More Tab */ = {
+			isa = PBXGroup;
+			children = (
+				84D7DECF1F8B26ED005AA182 /* MoreTableViewController.swift */,
+				01DD73B21F9CC960006D1256 /* DramaTicketsViewController.swift */,
+				014DA1ED1F81B98E00D2A42E /* RequestAClubViewController.swift */,
+				01A4826C1F81CCEF00679078 /* EgerianViewController.swift */,
+				8463A9321F734E3200C7ED2B /* MapViewController.swift */,
+				84E6E32B1F6F1632006B09C5 /* DailyViewController.swift */,
+				84E6E3291F6F1620006B09C5 /* NewsViewController.swift */,
+				84E415E81F748EAF00A84023 /* FeedbackViewController.swift */,
+				84E6E3231F6F1583006B09C5 /* LunchViewController.swift */,
+			);
+			path = "More Tab";
+			sourceTree = "<group>";
+		};
+		01DD73B51F9CCE10006D1256 /* Planner Tab */ = {
+			isa = PBXGroup;
+			children = (
+				018B2A211F7C161500ECDD18 /* PlannerViewController.swift */,
+				018B2A261F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift */,
+				01DD73B61F9CCE21006D1256 /* arrayOfSchoolYear.swift */,
+				018B2A251F7C1C3C00ECDD18 /* NewAssignmentViewController.swift */,
+			);
+			path = "Planner Tab";
+			sourceTree = "<group>";
+		};
+		01DD73BA1F9CCE50006D1256 /* Friends Tab */ = {
+			isa = PBXGroup;
+			children = (
+				84EF4D551F792F3D001CB1A3 /* QRReaderViewController.swift */,
+				84F4FA5B1F76C56300AEB21A /* FriendsTableViewController.swift */,
+				84F4FA5E1F76E75A00AEB21A /* AddFriendsViewController.swift */,
+			);
+			path = "Friends Tab";
+			sourceTree = "<group>";
+		};
+		01DD73BB1F9CCEB0006D1256 /* Schedule Tab */ = {
+			isa = PBXGroup;
+			children = (
+				8474E9821F18616300C116C3 /* RootViewController.swift */,
+				8474E9841F18616300C116C3 /* DataViewController.swift */,
+				8474E9861F18616300C116C3 /* ModelController.swift */,
+				84C7C39F1F675F5E005B941F /* ChangeOneTableViewController.swift */,
+				84C7C3A11F675F90005B941F /* ChangeOneRegularTableViewCell.swift */,
+				84C967581F66F991008DC01C /* ChangeOneTopbarViewController.swift */,
+				84C967561F66F933008DC01C /* ChangeAllTopbarViewController.swift */,
+				8453F4601F660A44001B79DE /* InputTopbarViewController.swift */,
+				84E43CC51F68123500A25CB9 /* inputProtocol.swift */,
+				848C80D01F68DFDD00ABD614 /* ChangeOneProtocol.swift */,
+				846D2E0E1F1A6432002D52CE /* PeriodCell.swift */,
+				844253741F45751E00A8D267 /* InputTableViewController.swift */,
+				844253781F457E3200A8D267 /* InputTableViewCell.swift */,
+				84104BBF1F4E601C00CCF911 /* ChangeAllTableViewController.swift */,
+				84104BC71F4E60A600CCF911 /* ChangeAllTableViewCell.swift */,
+			);
+			path = "Schedule Tab";
+			sourceTree = "<group>";
+		};
+		01DD73BC1F9CCF31006D1256 /* Barcode Tab */ = {
+			isa = PBXGroup;
+			children = (
+				84B047351F2E5E130060A6CD /* BarcodeViewController.swift */,
+				848633D91F4F239D00F4F94D /* BarCameraViewController.swift */,
+			);
+			path = "Barcode Tab";
+			sourceTree = "<group>";
+		};
 		8474E9741F18616300C116C3 = {
 			isa = PBXGroup;
 			children = (
@@ -151,42 +221,15 @@
 			isa = PBXGroup;
 			children = (
 				8474E9801F18616300C116C3 /* AppDelegate.swift */,
-				8474E9821F18616300C116C3 /* RootViewController.swift */,
-				8474E9841F18616300C116C3 /* DataViewController.swift */,
-				8474E9861F18616300C116C3 /* ModelController.swift */,
-				8474E9881F18616300C116C3 /* Main.storyboard */,
-				84D7DECF1F8B26ED005AA182 /* MoreTableViewController.swift */,
-				01A4826C1F81CCEF00679078 /* EgerianViewController.swift */,
-				014DA1ED1F81B98E00D2A42E /* RequestAClubViewController.swift */,
-				018B2A211F7C161500ECDD18 /* PlannerViewController.swift */,
-				017B58AF1F91BB360075DE9E /* arrayOfSchoolYear.swift */,
-				018B2A261F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift */,
-				018B2A251F7C1C3C00ECDD18 /* NewAssignmentViewController.swift */,
-				84F4FA5E1F76E75A00AEB21A /* AddFriendsViewController.swift */,
-				84F4FA5B1F76C56300AEB21A /* FriendsTableViewController.swift */,
-				84E415E81F748EAF00A84023 /* FeedbackViewController.swift */,
-				8463A9321F734E3200C7ED2B /* MapViewController.swift */,
-				84E6E3291F6F1620006B09C5 /* NewsViewController.swift */,
-				84E6E32B1F6F1632006B09C5 /* DailyViewController.swift */,
-				84C7C39F1F675F5E005B941F /* ChangeOneTableViewController.swift */,
-				84C7C3A11F675F90005B941F /* ChangeOneRegularTableViewCell.swift */,
-				84C967581F66F991008DC01C /* ChangeOneTopbarViewController.swift */,
-				84C967561F66F933008DC01C /* ChangeAllTopbarViewController.swift */,
-				8453F4601F660A44001B79DE /* InputTopbarViewController.swift */,
-				84E43CC51F68123500A25CB9 /* inputProtocol.swift */,
-				848C80D01F68DFDD00ABD614 /* ChangeOneProtocol.swift */,
+				01DD73BB1F9CCEB0006D1256 /* Schedule Tab */,
+				01DD73BC1F9CCF31006D1256 /* Barcode Tab */,
+				01DD73BA1F9CCE50006D1256 /* Friends Tab */,
+				01DD73B51F9CCE10006D1256 /* Planner Tab */,
+				01DD73B41F9CCDCE006D1256 /* More Tab */,
 				8474E98B1F18616300C116C3 /* Assets.xcassets */,
+				8474E9881F18616300C116C3 /* Main.storyboard */,
 				8474E98D1F18616300C116C3 /* LaunchScreen.storyboard */,
 				8474E9901F18616300C116C3 /* Info.plist */,
-				846D2E0E1F1A6432002D52CE /* PeriodCell.swift */,
-				84B047351F2E5E130060A6CD /* BarcodeViewController.swift */,
-				844253741F45751E00A8D267 /* InputTableViewController.swift */,
-				844253781F457E3200A8D267 /* InputTableViewCell.swift */,
-				84104BBF1F4E601C00CCF911 /* ChangeAllTableViewController.swift */,
-				84104BC71F4E60A600CCF911 /* ChangeAllTableViewCell.swift */,
-				848633D91F4F239D00F4F94D /* BarCameraViewController.swift */,
-				84E6E3231F6F1583006B09C5 /* LunchViewController.swift */,
-				84EF4D551F792F3D001CB1A3 /* QRReaderViewController.swift */,
 			);
 			path = "SSA Student";
 			sourceTree = "<group>";
@@ -305,11 +348,11 @@
 				8453F4611F660A44001B79DE /* InputTopbarViewController.swift in Sources */,
 				8463A9331F734E3200C7ED2B /* MapViewController.swift in Sources */,
 				018B2A221F7C161500ECDD18 /* PlannerViewController.swift in Sources */,
+				01DD73B71F9CCE22006D1256 /* arrayOfSchoolYear.swift in Sources */,
 				8474E9831F18616300C116C3 /* RootViewController.swift in Sources */,
 				84104BC01F4E601C00CCF911 /* ChangeAllTableViewController.swift in Sources */,
 				84EF4D561F792F3D001CB1A3 /* QRReaderViewController.swift in Sources */,
 				8474E9871F18616300C116C3 /* ModelController.swift in Sources */,
-				017B58B01F91BB360075DE9E /* arrayOfSchoolYear.swift in Sources */,
 				84D7DED01F8B26ED005AA182 /* MoreTableViewController.swift in Sources */,
 				84E43CC61F68123500A25CB9 /* inputProtocol.swift in Sources */,
 				8474E9851F18616300C116C3 /* DataViewController.swift in Sources */,
@@ -320,6 +363,7 @@
 				846D2E0F1F1A6432002D52CE /* PeriodCell.swift in Sources */,
 				8474E9811F18616300C116C3 /* AppDelegate.swift in Sources */,
 				84104BC81F4E60A600CCF911 /* ChangeAllTableViewCell.swift in Sources */,
+				01DD73B31F9CC960006D1256 /* DramaTicketsViewController.swift in Sources */,
 				844253791F457E3200A8D267 /* InputTableViewCell.swift in Sources */,
 				84B047361F2E5E130060A6CD /* BarcodeViewController.swift in Sources */,
 				848C80D11F68DFDD00ABD614 /* ChangeOneProtocol.swift in Sources */,

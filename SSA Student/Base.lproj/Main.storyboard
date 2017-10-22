@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -306,7 +306,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2El-VC-f97">
-                                        <rect key="frame" x="0.0" y="25" width="110" height="30"/>
+                                        <rect key="frame" x="0.0" y="37" width="110" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="110" id="gdW-NM-Elq"/>
                                         </constraints>
@@ -316,7 +316,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your friend's code here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dV3-QC-MCy">
-                                        <rect key="frame" x="0.0" y="57" width="208" height="30"/>
+                                        <rect key="frame" x="0.0" y="81" width="208" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="208" id="2Do-Gg-HnA"/>
                                         </constraints>
@@ -325,7 +325,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sharing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guv-3B-91k">
-                                        <rect key="frame" x="0.0" y="89" width="70" height="23"/>
+                                        <rect key="frame" x="0.0" y="125" width="70" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="vqb-ca-4km"/>
                                         </constraints>
@@ -334,13 +334,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If they are next to you, your friend can use their camera to scan your QR code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09r-eB-mVD">
-                                        <rect key="frame" x="0.0" y="114" width="251" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="162" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z1q-R9-Xbm">
-                                        <rect key="frame" x="0.0" y="149.5" width="171" height="171"/>
+                                        <rect key="frame" x="0.0" y="176" width="171" height="171"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                         </accessibility>
@@ -350,7 +350,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If your friend isn't nearby, send them your code that includes your name and your frees via a messenger app" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHO-Vb-X72">
-                                        <rect key="frame" x="0.0" y="322.5" width="255" height="50.5"/>
+                                        <rect key="frame" x="0.0" y="361" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -367,7 +367,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="your name." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ugi-1C-xXm">
-                                <rect key="frame" x="170" y="107" width="93" height="30"/>
+                                <rect key="frame" x="170" y="143" width="93" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -386,7 +386,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6gM-Gn-LVG">
-                                <rect key="frame" x="74.5" y="169.5" width="171" height="171"/>
+                                <rect key="frame" x="74.5" y="196" width="171" height="171"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -396,7 +396,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1B9-u2-J8d">
-                                <rect key="frame" x="258" y="76" width="49" height="30"/>
+                                <rect key="frame" x="258" y="100" width="49" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="faX-76-rB5"/>
                                 </constraints>
@@ -406,7 +406,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zr-Nu-2mU">
-                                <rect key="frame" x="160" y="45" width="130" height="30"/>
+                                <rect key="frame" x="160" y="57" width="130" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="Evx-Fc-r1Z"/>
                                 </constraints>
@@ -416,7 +416,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIc-0X-2CI">
-                                <rect key="frame" x="130" y="111.5" width="33" height="25.5"/>
+                                <rect key="frame" x="130" y="147.5" width="33" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="33" id="7QB-Zh-20l"/>
                                 </constraints>
@@ -425,7 +425,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Before sharing your schedule, enter your name, preferably one that is short but easily identifiable by your friends" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ag-JL-9cN">
-                                <rect key="frame" x="40" y="215" width="240" height="81.5"/>
+                                <rect key="frame" x="40" y="241.5" width="240" height="81.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -920,10 +920,38 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Clubs" id="5T0-2A-gck" userLabel="Clubs">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="50" id="clM-D9-iRq">
+                                        <rect key="frame" x="0.0" y="397.5" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="clM-D9-iRq" id="4UJ-Ot-44E">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Drama Ticket Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Uwl-KC-bAm">
+                                                    <rect key="frame" x="20" y="8" width="29" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play Tickets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgM-bQ-xBj">
+                                                    <rect key="frame" x="67" y="13" width="105" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="yil-IE-ra2" kind="show" id="iy4-kg-7bW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="" id="gXU-N3-Ycz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="50" id="CLO-at-jD4">
-                                        <rect key="frame" x="0.0" y="377.5" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="483.5" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CLO-at-jD4" id="svA-oP-i3V">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49.5"/>
@@ -947,7 +975,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="50" id="uSd-yV-hqZ">
-                                        <rect key="frame" x="0.0" y="427.5" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="533.5" width="320" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uSd-yV-hqZ" id="1Tp-pC-Qwj">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="49.5"/>
@@ -1309,6 +1337,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZe-kl-Z3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1694.2028985507247" y="-476.08695652173918"/>
+        </scene>
+        <!--Play Tickets-->
+        <scene sceneID="jre-p0-0qh">
+            <objects>
+                <viewController id="yil-IE-ra2" customClass="DramaTicketsViewController" customModule="SSA_Student" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4hh-vp-dH5"/>
+                        <viewControllerLayoutGuide type="bottom" id="NDF-Vm-JxP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xij-sZ-RfY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4r-iM-UnR">
+                                <rect key="frame" x="0.0" y="411" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Item" image="back" id="NTW-9Y-1lB">
+                                        <connections>
+                                            <action selector="back:" destination="yil-IE-ra2" id="isz-ml-5q4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Leh-QJ-jNr"/>
+                                    <barButtonItem title="Item" image="forward" id="zeI-XX-lDk">
+                                        <connections>
+                                            <action selector="forward:" destination="yil-IE-ra2" id="08z-ab-gbK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8Oc-hE-M4d"/>
+                                    <barButtonItem title="Item" image="safari" id="UR0-y3-das">
+                                        <connections>
+                                            <action selector="openSafari:" destination="yil-IE-ra2" id="RJF-As-Zq1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Play Tickets" id="6m6-pa-YjD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vFe-Pa-xmo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3140.625" y="-1197.8873239436621"/>
         </scene>
         <!--Daily Bulletin-->
         <scene sceneID="lLu-10-N5a">
@@ -1706,6 +1778,7 @@ Design based on the SSA Mobile created by David Franklin and Colin Mason</string
         </scene>
     </scenes>
     <resources>
+        <image name="Drama Ticket Icon" width="29" height="29"/>
         <image name="Planner" width="25" height="25"/>
         <image name="about" width="29" height="29"/>
         <image name="back" width="22" height="22"/>
