@@ -356,9 +356,10 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
             let inputArray = UserDefaults.standard.array(forKey: "AssignmentNamesArray")!
             let currentNumberOfAssignments = inputArray.count
             var array:[Int] = []
-            let i = 0
+            var i = 0
             while i < currentNumberOfAssignments {
-                array.append(1)
+                array.append(getIndexFromDate(inputDate: Date()))
+                i = i + 1
             }
             UserDefaults.standard.set(array, forKey: "DuePeriodArray")
         }

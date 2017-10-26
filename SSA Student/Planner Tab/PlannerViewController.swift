@@ -103,7 +103,23 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
                 return weekdayArray[inputWeekday - 1]
             }
         }
-        let dueDateArray:Array = UserDefaults.standard.array(forKey: "AssignmentDueDateArray")!
+        var dueDateArray:Array = UserDefaults.standard.array(forKey: "AssignmentDueDateArray")!
+        if dueDateArray[indexPath.row] is NSDate {
+            var i = 0
+            var newDueDateArray:[Int] = []
+            let dueDateArrayCount = dueDateArray.count
+            while (i < dueDateArrayCount) {
+                if dueDateArray[i] is NSDate {
+                newDueDateArray.append(getIndexFromDate(inputDate: dueDateArray[i] as! Date))
+                } else {
+                    newDueDateArray.append(dueDateArray[i] as! Int)
+                }
+                i = i + 1
+            }
+            dueDateArray = newDueDateArray
+            UserDefaults.standard.set(dueDateArray, forKey: "AssignmentDueDateArray")
+            UserDefaults.standard.synchronize()
+        }
         let dateformatter = DateFormatter()
         dateformatter.dateStyle = .medium
         let inputDate:Date = getDateFromIndex(inputPath: dueDateArray[indexPath.row] as! Int)
