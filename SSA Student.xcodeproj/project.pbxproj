@@ -12,6 +12,8 @@
 		018B2A271F7C1C3C00ECDD18 /* NewAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B2A251F7C1C3C00ECDD18 /* NewAssignmentViewController.swift */; };
 		018B2A281F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B2A261F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift */; };
 		01A4826D1F81CCEF00679078 /* EgerianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A4826C1F81CCEF00679078 /* EgerianViewController.swift */; };
+		01D5ED291FA25D4A003903B5 /* LostAndFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5ED281FA25D4A003903B5 /* LostAndFoundViewController.swift */; };
+		01D5ED2B1FA26183003903B5 /* LostAndFoundItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D5ED2A1FA26183003903B5 /* LostAndFoundItemTableViewCell.swift */; };
 		01DD73B31F9CC960006D1256 /* DramaTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DD73B21F9CC960006D1256 /* DramaTicketsViewController.swift */; };
 		01DD73B71F9CCE22006D1256 /* arrayOfSchoolYear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DD73B61F9CCE21006D1256 /* arrayOfSchoolYear.swift */; };
 		84104BC01F4E601C00CCF911 /* ChangeAllTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84104BBF1F4E601C00CCF911 /* ChangeAllTableViewController.swift */; };
@@ -84,6 +86,8 @@
 		018B2A251F7C1C3C00ECDD18 /* NewAssignmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAssignmentViewController.swift; sourceTree = "<group>"; };
 		018B2A261F7C1C3C00ECDD18 /* AssignmentTableViewCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCellViewController.swift; sourceTree = "<group>"; };
 		01A4826C1F81CCEF00679078 /* EgerianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EgerianViewController.swift; sourceTree = "<group>"; };
+		01D5ED281FA25D4A003903B5 /* LostAndFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostAndFoundViewController.swift; sourceTree = "<group>"; };
+		01D5ED2A1FA26183003903B5 /* LostAndFoundItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostAndFoundItemTableViewCell.swift; sourceTree = "<group>"; };
 		01DD73B21F9CC960006D1256 /* DramaTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaTicketsViewController.swift; sourceTree = "<group>"; };
 		01DD73B61F9CCE21006D1256 /* arrayOfSchoolYear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = arrayOfSchoolYear.swift; sourceTree = "<group>"; };
 		84104BBF1F4E601C00CCF911 /* ChangeAllTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeAllTableViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01D5ED2C1FA26189003903B5 /* Lost and Found */ = {
+			isa = PBXGroup;
+			children = (
+				01D5ED2A1FA26183003903B5 /* LostAndFoundItemTableViewCell.swift */,
+				01D5ED281FA25D4A003903B5 /* LostAndFoundViewController.swift */,
+			);
+			path = "Lost and Found";
+			sourceTree = "<group>";
+		};
 		01DD73B41F9CCDCE006D1256 /* More Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +157,7 @@
 				84E6E3291F6F1620006B09C5 /* NewsViewController.swift */,
 				84E415E81F748EAF00A84023 /* FeedbackViewController.swift */,
 				84E6E3231F6F1583006B09C5 /* LunchViewController.swift */,
+				01D5ED2C1FA26189003903B5 /* Lost and Found */,
 			);
 			path = "More Tab";
 			sourceTree = "<group>";
@@ -342,6 +356,7 @@
 				844253751F45751E00A8D267 /* InputTableViewController.swift in Sources */,
 				84F4FA5C1F76C56300AEB21A /* FriendsTableViewController.swift in Sources */,
 				84E6E32A1F6F1620006B09C5 /* NewsViewController.swift in Sources */,
+				01D5ED2B1FA26183003903B5 /* LostAndFoundItemTableViewCell.swift in Sources */,
 				84E415E91F748EAF00A84023 /* FeedbackViewController.swift in Sources */,
 				84C967591F66F991008DC01C /* ChangeOneTopbarViewController.swift in Sources */,
 				84C7C3A21F675F90005B941F /* ChangeOneRegularTableViewCell.swift in Sources */,
@@ -357,6 +372,7 @@
 				84E43CC61F68123500A25CB9 /* inputProtocol.swift in Sources */,
 				8474E9851F18616300C116C3 /* DataViewController.swift in Sources */,
 				84F4FA5F1F76E75A00AEB21A /* AddFriendsViewController.swift in Sources */,
+				01D5ED291FA25D4A003903B5 /* LostAndFoundViewController.swift in Sources */,
 				84C967571F66F933008DC01C /* ChangeAllTopbarViewController.swift in Sources */,
 				84E6E32C1F6F1632006B09C5 /* DailyViewController.swift in Sources */,
 				014DA1EE1F81B98E00D2A42E /* RequestAClubViewController.swift in Sources */,
