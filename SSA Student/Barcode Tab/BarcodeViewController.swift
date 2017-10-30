@@ -15,6 +15,7 @@ class BarcodeViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var vcname: UILabel!
     
+    @IBOutlet weak var bgimageview: UIImageView!
     @IBOutlet weak var topbar: UIImageView!
     var barImage: UIImageView? = nil
     @IBAction func dismissKeyboard(_ sender: UIButton) {
@@ -69,13 +70,13 @@ class BarcodeViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.view.bounds.width == 320 {
-            self.view.backgroundColor = UIColor(patternImage: UIImage(named:"SSA_BG1_IOS (640x1136)")!)
+            bgimageview.image = UIImage(named:"SSA_BG1_IOS (640x1136)")!
             
         } else if self.view.bounds.width == 375 {
-            self.view.backgroundColor = UIColor(patternImage: UIImage(named:"SSA_BG1_IOS (750x1334)")!)
+            bgimageview.image = UIImage(named:"SSA_BG1_IOS (750x1334)")!
             
         } else {
-            self.view.backgroundColor = UIColor(patternImage: UIImage(named:"SSA_BG1_IOs (1242x2208)")!)
+            bgimageview.image = UIImage(named:"SSA_BG1_IOs (1242x2208)")!
             
         }
         let color: UIColor = UIColor(red: (29/255.0), green: (54/255.0), blue: (95/255.0), alpha: 1.0)
